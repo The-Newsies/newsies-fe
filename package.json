@@ -25,6 +25,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
     "promise-middleware-redux": "^1.2.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
