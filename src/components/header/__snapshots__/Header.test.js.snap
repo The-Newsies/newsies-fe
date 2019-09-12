@@ -5,5 +5,6 @@ exports[`Header component renders Header 1`] = `
   <h1>
     Newzie
   </h1>
+  <DropDownMenu />
 </div>
 `;
