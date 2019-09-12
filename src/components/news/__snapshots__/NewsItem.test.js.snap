@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsItem component renders NewsItem 1`] = `
+<div>
+  <div>
+    <h3>
+      title
+    </h3>
+  </div>
+  <div>
+    <p>
+      description
+    </p>
+  </div>
+  <div>
+    <p>
+      author
+    </p>
+  </div>
+  <div>
+    <p>
+      date
+    </p>
+  </div>
+  <div>
+    <img
+      src="image"
+    />
+  </div>
+  <div>
+    <a
+      href="sourcelink"
+    >
+      sourcename
+    </a>
+  </div>
+  <div>
+    <div>
+      tagColor
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component renders SearchBar 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    placeholder="search"
+    type="text"
+    value="hello"
+  />
+  <span>
+    <a
+      onClick={[Function]}
+    >
+      Trending
+    </a>
+    <a
+      onClick={[Function]}
+    >
+      My News
+    </a>
+  </span>
+</div>
+`;

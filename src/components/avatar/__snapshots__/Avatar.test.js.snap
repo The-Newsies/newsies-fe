@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component renders Avatar 1`] = `
+<div>
+  <img
+    src="image url"
+  />
+</div>
+`;
