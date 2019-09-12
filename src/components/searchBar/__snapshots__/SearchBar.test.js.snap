@@ -8,5 +8,17 @@ exports[`SearchBar component renders SearchBar 1`] = `
     type="text"
     value="hello"
   />
+  <span>
+    <a
+      onClick={[Function]}
+    >
+      Trending
+    </a>
+    <a
+      onClick={[Function]}
+    >
+      My News
+    </a>
+  </span>
 </div>
 `;

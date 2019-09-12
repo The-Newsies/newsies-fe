@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './header/Header';
 import SearchBar from './searchBar/SearchBar';
 import NewsList from './news/NewsList';
+import TagsList from './tags/TagsList';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           }
         ]}
       />
+      <TagsList tags={[{ name: 'sports', color: 'sdfsdfs' }]} />
     </>
   );
 }
