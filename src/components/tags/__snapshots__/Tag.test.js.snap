@@ -2,7 +2,7 @@
 
 exports[`Tag component renders Tag 1`] = `
 <div>
-  <span>
+  <button>
     <div
       style={
         Object {
@@ -13,6 +13,6 @@ exports[`Tag component renders Tag 1`] = `
     <p>
       Science
     </p>
-  </span>
+  </button>
 </div>
 `;

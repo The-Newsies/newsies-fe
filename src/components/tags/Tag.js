@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 export default function Tag({ name, color }) {
   return (
     <div>
-      <span>
+      <button>
         <div style={{ background: color }}></div>
         <p>{name}</p>
-      </span>
+      </button>
     </div>
   );
 }
