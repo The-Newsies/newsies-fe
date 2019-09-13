@@ -5,14 +5,14 @@ export const setToken = newToken => {
 
 export const getTags = () => {
   return (
-    fetch(`${process.env.API_URL}/tags`),
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`
-      }
-    }
+    fetch(`${process.env.API_URL}/tags`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        }
+      })
       .then(res => {
         if(!res.ok) throw 'Unable to retrieve tags';
 
@@ -21,7 +21,7 @@ export const getTags = () => {
       .then(tags => {
         return tags.map(tag => ({
           name: tag.name,
-          color: tag.color
+          color: tag.hexCode
         }));
       })
   );
