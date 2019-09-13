@@ -6,6 +6,7 @@ import TagsList from './tags/TagsList';
 import Avatar from '../components/avatar/Avatar';
 import placeholder from '../assets/placeholder.png';
 import { useAuth0 } from '../Auth0Provider';
+import TagsContainer from '../containers/TagsContainer';
 
 export default function App() {
   const { isAuthenticated, auth0Client } = useAuth0();
@@ -34,7 +35,7 @@ export default function App() {
           }
         ]}
       />
-      <TagsList tags={[{ name: 'sports', color: 'sdfsdfs' }]} />
+      <TagsContainer tags={[{ name: 'sports', color: 'sdfsdfs' }]} />
     </>
   );
 }

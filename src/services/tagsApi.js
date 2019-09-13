@@ -5,7 +5,7 @@ export const setToken = newToken => {
 
 export const getTags = () => {
   return (
-    fetch('URL WILL GO HERE'),
+    fetch(`${process.env.API_URL}/tags`),
     {
       method: 'GET',
       headers: {
