@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
-import { setToken } from './services/habitsApi';
+import { setToken } from './services/tagsApi';
 
 const DEFAULT_REDIRECT_CALLBACK = () => {
   window.history.replaceState({},
