@@ -6,11 +6,11 @@ import App from './components/App';
 import store from './store';
 
 render(
-  <Auth0Provider>
+  <Auth0Provider
     domain={process.env.AUTH0_DOMAIN}
-    client={process.env.AUTH0_CLIENT_ID}
+    client_id={process.env.AUTH0_CLIENT_ID}
     redirect_url={process.env.AUTH0_CALLBACK}
-
+  >
     <Provider store={store}>
       <App />
     </Provider>
