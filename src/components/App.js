@@ -5,10 +5,18 @@ import NewsList from './news/NewsList';
 import TagsList from './tags/TagsList';
 import Avatar from '../components/avatar/Avatar';
 import placeholder from '../assets/placeholder.png';
+import { useAuth0 } from '../Auth0Provider';
 
 export default function App() {
+  const { isAuthenticated, auth0Client } = useAuth0();
+  const login = () => auth0Client.loginWithRedirect();
+  const logout = () => auth0Client.logout();
   return (
     <>
+    { !isAuthenticated ? 
+      <button onClick={login}>Login</button> 
+      : <button onClick={logout}>Logout</button>
+    }
       <Header />
       <Avatar image={placeholder} />
       <SearchBar />
