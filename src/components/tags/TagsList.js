@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Tag from './Tag';
 
 export default function TagsList({ tags }) {
-  const tagArray = tags.map(({ name, color }) => (
-    <li key={name}>
+  const tagArray = tags.map(({ name, color, _id }) => (
+    <li key={_id}>
       <Tag name={name} color={color} />
     </li>
   ));
@@ -18,6 +18,7 @@ export default function TagsList({ tags }) {
 
 TagsList.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired
   })).isRequired

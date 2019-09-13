@@ -20,6 +20,7 @@ export const getTags = () => {
       })
       .then(tags => {
         return tags.map(tag => ({
+          _id: tag._id,
           name: tag.name,
           color: tag.hexCode
         }));
