@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
-import { setToken } from './services/tagsApi';
+import { setToken } from './services/request';
 import { getUsers, postUser } from './services/usersApi';
 
 const DEFAULT_REDIRECT_CALLBACK = () => {
@@ -48,7 +48,6 @@ export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_R
         setUser(user);
         const claims = await auth0.getIdTokenClaims();
         setToken(claims.__raw);
-        //gonna get users from db
         const users = await getUsers();
         let doesExist = false;
         users.forEach(userDb => {
@@ -59,8 +58,6 @@ export default function Auth0Provider({ children, onRedirectCallback = DEFAULT_R
         if(!doesExist) {
           postUser(user.nickname, user.picture);
         }
-        //check if user exits (GET)
-        // if not, create a user (POST)
       }
 
       updateLoading(false);
