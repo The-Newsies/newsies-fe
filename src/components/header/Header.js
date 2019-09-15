@@ -1,11 +1,14 @@
 import React from 'react';
-import DropDownMenu from '../dropDownMenu/DropDownMenu';
+import { useAuth0 } from '../../Auth0Provider';
+import LandingWrapper from './LandingWrapper';
+import MyViewWrapper from './MyViewWrapper';
 
 export default function Header() {
+  const { isAuthenticated } = useAuth0();
   return (
     <div>
       <h1>Newzie</h1>
-      <DropDownMenu />
+      {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper />}
     </div>
   );
 }
