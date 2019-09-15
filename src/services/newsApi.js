@@ -6,6 +6,8 @@ export const getTrending = () => {
       return res.json();
     })
     .then(res => {
-      return res.articles;
+      return res.articles.map(article => ({
+        ...article, publishedAt: article.publishedAt.split('T')[0]
+      }));
     });
 };
