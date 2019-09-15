@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  border: solid black 1px;
+  height: 168px;
+  width: 1100px;
+}
+
+.container img {
+  height: 169px;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imageContainer p {
+  margin-left: 3px;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+  width: 650px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+

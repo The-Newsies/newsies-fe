@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NewsItem from './NewsItem';
+import './NewsList.css';
 
 export default function NewsItemsList({ news }) {
   const newsList = news.map(({
