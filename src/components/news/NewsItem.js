@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './NewsItem.css';
 
 export default function NewsItem({ 
   title, 
@@ -10,15 +11,28 @@ export default function NewsItem({
   sourceName, 
   image,
   tagColor }) {
+
+  const tagColorStyles = {
+    background: tagColor,
+    width: '30px',
+    height: '168px',
+  };
+
   return (
-    <div>
-      <div><h3>{title}</h3></div>
-      <div><p>{description}</p></div>
-      <div><p>{author}</p></div>
-      <div><p>{date}</p></div>
-      <div><img src={image} /></div>
-      <div><a href={sourceLink}>{sourceName}</a></div>
-      <div><div>{tagColor}</div></div>
+    <div className={styles.container}>
+      <div style={tagColorStyles}></div>
+      <div className={styles.imageContainer}>
+        <img src={image} />
+      </div>
+      <div className={styles.titleContainer}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <div className={styles.links}>
+          <p>Published: {date}</p>
+          <p>Author: {author}</p>
+          <a href={sourceLink}>Full Article at {sourceName}</a>
+        </div>
+      </div>
     </div>
   );
 }
