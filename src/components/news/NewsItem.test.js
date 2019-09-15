@@ -7,11 +7,11 @@ describe('NewsItem component', () => {
     const wrapper = shallow(<NewsItem 
       title={'title'}  
       description={'description'}  
-      date={'date'}
+      publishedAt={'publishedAt'}
       author={'author'}
-      sourceLink={'sourcelink'}
-      sourceName={'sourcename'}
-      image={'image'}
+      url={'url'}
+      source={'source'}
+      urlToImage={'urlToImage'}
       tagColor={'tagColor'}
     />);
     expect(wrapper).toMatchSnapshot();

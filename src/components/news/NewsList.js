@@ -7,22 +7,22 @@ export default function NewsItemsList({ news }) {
   const newsList = news.map(({
     title,
     description,
-    image,
+    urlToImage,
     author,
-    date,
-    sourceName,
-    sourceLink,
+    publishedAt,
+    source,
+    url,
     tagColor
   }) => (
-    <li key={sourceLink}>
+    <li key={url}>
       <NewsItem 
         title={title}
         description={description}
-        image={image}
+        urlToImage={urlToImage}
         author={author}
-        date={date}
-        sourceName={sourceName}
-        sourceLink={sourceLink}
+        publishedAt={publishedAt}
+        source={source}
+        url={url}
         tagColor={tagColor}
       />
     </li>
@@ -39,11 +39,14 @@ NewsItemsList.propTypes = {
   news: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    urlToImage: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    sourceName: PropTypes.string.isRequired,
-    sourceLink: PropTypes.string.isRequired,
+    publishedAt: PropTypes.string.isRequired,
+    source: PropTypes.shape({ 
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired
+    }).isRequired,
+    url: PropTypes.string.isRequired,
     tagColor: PropTypes.string.isRequired
   })).isRequired
 };

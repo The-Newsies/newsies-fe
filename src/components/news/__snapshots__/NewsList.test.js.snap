@@ -2,16 +2,10 @@
 
 exports[`NewsList component renders NewsList 1`] = `
 <ul>
-  <li
-    key="sourceLink"
-  >
+  <li>
     <NewsItem
       author="author"
-      date="date"
       description="description"
-      image="image url"
-      sourceLink="sourceLink"
-      sourceName="sourceName"
       tagColor="tagColor"
       title="Title"
     />
