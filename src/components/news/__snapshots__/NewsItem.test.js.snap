@@ -14,11 +14,13 @@ exports[`NewsItem component renders NewsItem 1`] = `
   </div>
   <div>
     <p>
+      Author: 
       author
     </p>
   </div>
   <div>
     <p>
+      Published: 
       date
     </p>
   </div>
@@ -31,13 +33,20 @@ exports[`NewsItem component renders NewsItem 1`] = `
     <a
       href="sourcelink"
     >
+      Full Article at 
       sourcename
     </a>
   </div>
   <div>
-    <div>
-      tagColor
-    </div>
+    <div
+      style={
+        Object {
+          "background": "tagColor",
+          "height": "100px",
+          "width": "100x",
+        }
+      }
+    />
   </div>
 </div>
 `;
