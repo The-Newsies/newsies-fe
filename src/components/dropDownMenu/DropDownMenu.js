@@ -15,7 +15,7 @@ export default function DropDownMenu() {
   }
 
   function handleClose() {
-    setAnchorEl(logout);
+    setAnchorEl(null);
   }
 
   return (
@@ -30,7 +30,7 @@ export default function DropDownMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Sign Out</MenuItem>
+        <MenuItem onClick={handleClose}><span onClick={logout}>Sign-out</span></MenuItem>
       </Menu>
     </div>
   );
