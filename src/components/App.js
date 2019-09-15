@@ -20,7 +20,7 @@ export default function App() {
             date: '03-20-2019',
             sourceName: 'Engadget',
             sourceLink: 'https://www.engadget.com/2019/09/09/fubo-sports-network-will-stream-live-sports-and-original-shows/',
-            tagColor: '#D291BC'
+            tagColor: '#654321'
           }
         ]}
       />

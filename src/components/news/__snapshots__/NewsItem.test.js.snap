@@ -8,7 +8,7 @@ exports[`NewsItem component renders NewsItem 1`] = `
     style={
       Object {
         "background": "tagColor",
-        "height": "168px",
+        "height": "170px",
         "width": "30px",
       }
     }

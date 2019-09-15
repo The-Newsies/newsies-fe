@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tag from './Tag';
+import './TagsList.css';
 
 export default function TagsList({ tags }) {
   const tagArray = tags.map(({ name, color, _id }) => (
