@@ -7,9 +7,12 @@ import styles from './Header.css';
 export default function Header() {
   const { isAuthenticated } = useAuth0();
   return (
+    <>
     <div className={styles.header}>
       <h1>Newzie</h1>
       {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper />}
     </div>
+    <hr className={styles.line} />
+    </>
   );
 }
