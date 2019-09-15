@@ -4,7 +4,7 @@ import TagsList from './TagsList';
 
 describe('TagsList component', () => {
   it('renders TagsList', () => {
-    const wrapper = shallow(<TagsList tags={[{ name: 'art', color: 'werwer' }]}/>);
+    const wrapper = shallow(<TagsList tags={[{ name: 'art', color: 'werwer', _id: 'erereet' }]}/>);
     expect(wrapper).toMatchSnapshot();
   });
 });

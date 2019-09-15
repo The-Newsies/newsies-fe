@@ -34,7 +34,7 @@ export default function App() {
           }
         ]}
       />
-      <TagsContainer tags={[{ name: 'sports', color: 'sdfsdfs' }]} />
+      <TagsContainer />
     </>
   );
 }

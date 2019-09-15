@@ -1,6 +1,6 @@
 import { FETCH_TAGS } from '../actions/tagsActions';
 
-const initialState = [{ name: '', color: '' }];
+const initialState = [{ name: '', color: '', _id: '' }];
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
