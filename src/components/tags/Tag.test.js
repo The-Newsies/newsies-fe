@@ -4,7 +4,12 @@ import Tag from './Tag';
 
 describe('Tag component', () => {
   it('renders Tag', () => {
-    const wrapper = shallow(<Tag name={'Science'} color={'FFF'}/>);
+    const wrapper = shallow(<Tag 
+      name={'Science'} 
+      color={'FFF'}
+      handleClick={() => {}}
+      _id={'erereet'}
+    />);
     expect(wrapper).toMatchSnapshot();
   });
 });
