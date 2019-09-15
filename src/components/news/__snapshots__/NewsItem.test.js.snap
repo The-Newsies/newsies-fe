@@ -1,52 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsItem component renders NewsItem 1`] = `
-<div>
-  <div>
-    <h3>
-      title
-    </h3>
-  </div>
-  <div>
-    <p>
-      description
-    </p>
-  </div>
-  <div>
-    <p>
-      Author: 
-      author
-    </p>
-  </div>
-  <div>
-    <p>
-      Published: 
-      date
-    </p>
-  </div>
-  <div>
+<div
+  className="container"
+>
+  <div
+    style={
+      Object {
+        "background": "tagColor",
+        "height": "168px",
+        "width": "30px",
+      }
+    }
+  />
+  <div
+    className="imageContainer"
+  >
     <img
       src="image"
     />
   </div>
-  <div>
-    <a
-      href="sourcelink"
-    >
-      Full Article at 
-      sourcename
-    </a>
-  </div>
-  <div>
+  <div
+    className="titleContainer"
+  >
+    <h3>
+      title
+    </h3>
+    <p>
+      description
+    </p>
     <div
-      style={
-        Object {
-          "background": "tagColor",
-          "height": "100px",
-          "width": "100x",
-        }
-      }
-    />
+      className="links"
+    >
+      <p>
+        Published: 
+        date
+      </p>
+      <p>
+        Author: 
+        author
+      </p>
+      <a
+        href="sourcelink"
+      >
+        Full Article at 
+        sourcename
+      </a>
+    </div>
   </div>
 </div>
 `;
