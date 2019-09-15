@@ -1,2 +1,2 @@
-export const getTrending = state => state.articles;
-export const getLoading = state => state.loading;
+export const getTrending = state => state.trending.articles;
+export const getLoading = state => state.trending.loading;
