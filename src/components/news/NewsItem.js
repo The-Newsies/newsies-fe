@@ -10,15 +10,22 @@ export default function NewsItem({
   sourceName, 
   image,
   tagColor }) {
+
+  const tagColorStyles = {
+    background: tagColor,
+    width: '100x',
+    height: '100px',
+  };
+
   return (
     <div>
       <div><h3>{title}</h3></div>
       <div><p>{description}</p></div>
-      <div><p>{author}</p></div>
-      <div><p>{date}</p></div>
+      <div><p>Author: {author}</p></div>
+      <div><p>Published: {date}</p></div>
       <div><img src={image} /></div>
-      <div><a href={sourceLink}>{sourceName}</a></div>
-      <div><div>{tagColor}</div></div>
+      <div><a href={sourceLink}>Full Article at {sourceName}</a></div>
+      <div><div style={tagColorStyles}></div></div>
     </div>
   );
 }
