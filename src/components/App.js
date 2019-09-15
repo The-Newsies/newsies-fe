@@ -1,19 +1,11 @@
 import React from 'react';
 import Header from './header/Header';
 import NewsList from './news/NewsList';
-import { useAuth0 } from '../Auth0Provider';
 import TagsContainer from '../containers/TagsContainer';
 
 export default function App() {
-  const { isAuthenticated, auth0Client } = useAuth0();
-  const login = () => auth0Client.loginWithRedirect();
-  const logout = () => auth0Client.logout();
   return (
     <>
-    { !isAuthenticated ? 
-      <button onClick={login}>Login</button> 
-      : <button onClick={logout}>Logout</button>
-    }
       <Header />
       <NewsList
         news={[
