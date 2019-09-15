@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useAuth0 } from '../../Auth0Provider';
+import avatar from '../../assets/earth.png';
 
-export default function Avatar({ image }) {
+export default function Avatar() {
+  const { user } = useAuth0();
   return (
     <div>
-      <img src={image} />
+      {user ? <img src={user.picture} /> 
+        : <img src={avatar} />}
     </div>
   );
 }
-
-Avatar.propTypes = {
-  image: PropTypes.string.isRequired
-};
