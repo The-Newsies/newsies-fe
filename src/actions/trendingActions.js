@@ -1,7 +1,7 @@
 import { getTrending } from '../services/newsApi';
+import { FETCH_LOADING } from './loadingActions';
 
 export const FETCH_TRENDING = 'FETCH_TRENDING';
-export const FETCH_LOADING = 'FETCH_LOADING';
 
 export const fetchTrending = () => ({
   type: FETCH_TRENDING,

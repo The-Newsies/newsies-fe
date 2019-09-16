@@ -1,8 +1,9 @@
 import {
   fetchTrending,
   FETCH_TRENDING,
-  FETCH_LOADING
 } from './trendingActions';
+
+import { FETCH_LOADING } from './loadingActions';
 
 jest.mock('../services/newsApi.js', () => ({
   getTrending: () => Promise
