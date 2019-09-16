@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsViewToggle component renders NewsViewToggle 1`] = `
+<span>
+  <a
+    onClick={[Function]}
+  >
+    Trending
+  </a>
+  <a
+    onClick={[Function]}
+  >
+    My News
+  </a>
+</span>
+`;

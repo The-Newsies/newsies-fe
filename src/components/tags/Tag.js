@@ -1,11 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Tag.css';
 
 export default function Tag({ name, color, _id, handleClick }) {
+  
+  const tagColorStyles = {
+    background: color,
+    width: '35px',
+    height: '13px',
+  };
+
   return (
     <div>
-      <button onClick={() => handleClick(_id)}>
-        <div style={{ background: color }}></div>
+      <button className={styles.button} onClick={() => handleClick(_id)}>
+        <div style={tagColorStyles}></div>
         <p>{name}</p>
       </button>
     </div>
