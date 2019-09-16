@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBarContainer from '../../containers/SearchContainer';
+import SearchBarContainer from '../../containers/SearchBarContainer';
 import { useAuth0 } from '../../Auth0Provider';
 import styles from './LandingWrapper.css';
 

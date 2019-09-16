@@ -1,5 +1,4 @@
-import { FETCH_SEARCH_ALL, FETCH_SEARCH_BY_CATEGORY } from '../actions/searchActions';
-import { FETCH_LOADING } from '../actions/loadingActions';
+import { FETCH_SEARCH_ALL, FETCH_SEARCH_BY_CATEGORY, FETCH_LOADING_SEARCH } from '../actions/searchActions';
 
 const initialState = {
   articles: [],
@@ -12,7 +11,7 @@ export default function reducer(state = initialState, action) {
       return { ...state, articles: action.payload, loading: false };
     case FETCH_SEARCH_BY_CATEGORY:
       return { ...state, articles: action.payload, loading: false };
-    case FETCH_LOADING:
+    case FETCH_LOADING_SEARCH:
       return { ...state, loading: true };
     default:
       return state;

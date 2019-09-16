@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBarContainer from '../../containers/SearchContainer';
+import SearchBarContainer from '../../containers/SearchBarContainer';
 import NewsViewToggle from '../newsView/NewsViewToggle';
 import Avatar from '../avatar/Avatar';
 import DropDownMenu from '../dropDownMenu/DropDownMenu';
