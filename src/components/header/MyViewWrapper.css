@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarSignOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}

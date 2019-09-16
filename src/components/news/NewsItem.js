@@ -15,7 +15,7 @@ export default function NewsItem({
   const tagColorStyles = {
     background: tagColor,
     width: '30px',
-    height: '168px',
+    height: '170px',
   };
 
   return (

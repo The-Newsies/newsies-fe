@@ -1,24 +1,12 @@
 import React from 'react';
 import Header from './header/Header';
-import SearchBar from './searchBar/SearchBar';
 import NewsList from './news/NewsList';
-import Avatar from '../components/avatar/Avatar';
-import { useAuth0 } from '../Auth0Provider';
 import TagsContainer from '../containers/TagsContainer';
 
 export default function App() {
-  const { isAuthenticated, auth0Client } = useAuth0();
-  const login = () => auth0Client.loginWithRedirect();
-  const logout = () => auth0Client.logout();
   return (
     <>
-    { !isAuthenticated ? 
-      <button onClick={login}>Login</button> 
-      : <button onClick={logout}>Logout</button>
-    }
       <Header />
-      <Avatar />
-      <SearchBar />
       <NewsList
         news={[
           {
@@ -32,7 +20,7 @@ export default function App() {
             date: '03-20-2019',
             sourceName: 'Engadget',
             sourceLink: 'https://www.engadget.com/2019/09/09/fubo-sports-network-will-stream-live-sports-and-original-shows/',
-            tagColor: '#D291BC'
+            tagColor: '#654321'
           }
         ]}
       />

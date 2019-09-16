@@ -3,12 +3,15 @@
 exports[`Tag component renders Tag 1`] = `
 <div>
   <button
+    className="button"
     onClick={[Function]}
   >
     <div
       style={
         Object {
           "background": "FFF",
+          "height": "13px",
+          "width": "35px",
         }
       }
     />
