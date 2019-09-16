@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../components/header/Header';
-import TrendingContainer from '../containers/TrendingContainer';
+import NewsContainer from '../containers/NewsContainer';
 
 export default function Landing() {
   return (
     <>
       <Header />
-      <TrendingContainer />
+      <NewsContainer />
     </>
   );
 }
