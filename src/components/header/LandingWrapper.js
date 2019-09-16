@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '../searchBar/SearchBar';
+import SearchBarContainer from '../../containers/SearchBarContainer';
 import { useAuth0 } from '../../Auth0Provider';
 import styles from './LandingWrapper.css';
 import { NavLink } from 'react-router-dom';
@@ -10,7 +10,7 @@ export default function LandingWrapper() {
   
   return (
     <div className={styles.container}>
-      <SearchBar />
+      <SearchBarContainer />
       <button onClick={login}>Sign-in | Sign-up</button>
       <NavLink to='/'>Trending</NavLink>
     </div>

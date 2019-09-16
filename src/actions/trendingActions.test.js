@@ -1,7 +1,7 @@
 import {
   fetchTrending,
   FETCH_TRENDING,
-  FETCH_LOADING
+  FETCH_LOADING_TRENDING
 } from './trendingActions';
 
 jest.mock('../services/newsApi.js', () => ({
@@ -15,7 +15,7 @@ describe('trendingActions tests', () => {
     expect(actionCreator).toEqual({ 
       type: FETCH_TRENDING, 
       payload: Promise,
-      pendingType: FETCH_LOADING
+      pendingType: FETCH_LOADING_TRENDING
     });
   });
 });
