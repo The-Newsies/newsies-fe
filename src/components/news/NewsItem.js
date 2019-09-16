@@ -5,11 +5,11 @@ import styles from './NewsItem.css';
 export default function NewsItem({ 
   title, 
   description, 
-  date, 
+  publishedAt, 
   author, 
-  sourceLink, 
-  sourceName, 
-  image,
+  url, 
+  source, 
+  urlToImage,
   tagColor }) {
 
   const tagColorStyles = {
@@ -22,15 +22,15 @@ export default function NewsItem({
     <div className={styles.container}>
       <div style={tagColorStyles}></div>
       <div className={styles.imageContainer}>
-        <img src={image} />
+        <img src={urlToImage} />
       </div>
       <div className={styles.titleContainer}>
         <h3>{title}</h3>
         <p>{description}</p>
         <div className={styles.links}>
-          <p>Published: {date}</p>
+          <p>Published: {publishedAt}</p>
           <p>Author: {author}</p>
-          <a href={sourceLink}>Full Article at {sourceName}</a>
+          <a href={url}>Full Article at {source.name}</a>
         </div>
       </div>
     </div>
@@ -40,10 +40,13 @@ export default function NewsItem({
 NewsItem.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  urlToImage: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  sourceName: PropTypes.string.isRequired,
-  sourceLink: PropTypes.string.isRequired,
+  publishedAt: PropTypes.string.isRequired,
+  source: PropTypes.shape({ 
+    name: PropTypes.string,
+    id: PropTypes.string
+  }).isRequired,
+  url: PropTypes.string.isRequired,
   tagColor: PropTypes.string.isRequired
 };

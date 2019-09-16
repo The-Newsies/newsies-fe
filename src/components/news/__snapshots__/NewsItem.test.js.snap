@@ -17,7 +17,7 @@ exports[`NewsItem component renders NewsItem 1`] = `
     className="imageContainer"
   >
     <img
-      src="image"
+      src="urlToImage"
     />
   </div>
   <div
@@ -34,17 +34,16 @@ exports[`NewsItem component renders NewsItem 1`] = `
     >
       <p>
         Published: 
-        date
+        publishedAt
       </p>
       <p>
         Author: 
         author
       </p>
       <a
-        href="sourcelink"
+        href="url"
       >
         Full Article at 
-        sourcename
       </a>
     </div>
   </div>
