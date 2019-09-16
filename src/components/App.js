@@ -1,14 +1,15 @@
 import React from 'react';
-import Header from './header/Header';
-import TagsContainer from '../containers/TagsContainer';
-import TrendingContainer from '../containers/TrendingContainer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Landing from '../pages/Landing';
+import MyNews from '../pages/MyNews';
 
 export default function App() {
   return (
     <>
-      <Header />
-      <TrendingContainer />
-      <TagsContainer />
+      <Router>
+        <Route exact path='/' component={Landing} />
+        <Route path='/myNews' component={MyNews} />
+      </Router>
     </>
   );
 }
