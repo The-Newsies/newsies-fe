@@ -1,3 +1,4 @@
+import placeholder from '../assets/newsPlaceholder.jpg';
 
 export const getTrending = () => {
   return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWS_API_KEY}`)
@@ -9,7 +10,8 @@ export const getTrending = () => {
       return res.articles.map(article => ({
         ...article, 
         publishedAt: article.publishedAt.split('T')[0],
-        author: !article.author ? 'unknown' : article.author 
+        author: !article.author ? 'unknown' : article.author, 
+        urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
     });
 };
