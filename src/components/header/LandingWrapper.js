@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '../searchBar/SearchBar';
+import SearchBarContainer from '../../containers/SearchContainer';
 import { useAuth0 } from '../../Auth0Provider';
 import styles from './LandingWrapper.css';
 
@@ -9,7 +9,7 @@ export default function LandingWrapper() {
   
   return (
     <div className={styles.container}>
-      <SearchBar />
+      <SearchBarContainer />
       <button onClick={login}>Sign-in | Sign-up</button>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '../searchBar/SearchBar';
+import SearchBarContainer from '../../containers/SearchContainer';
 import NewsViewToggle from '../newsView/NewsViewToggle';
 import Avatar from '../avatar/Avatar';
 import DropDownMenu from '../dropDownMenu/DropDownMenu';
@@ -9,7 +9,7 @@ export default function MyViewWrapper() {
   return (
     <div className={styles.container}>
       <div>
-        <SearchBar />
+        <SearchBarContainer />
         <NewsViewToggle />
       </div>
       <div className={styles.avatarSignOut}>
