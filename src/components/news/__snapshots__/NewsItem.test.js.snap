@@ -42,6 +42,8 @@ exports[`NewsItem component renders NewsItem 1`] = `
       </p>
       <a
         href="url"
+        rel="noopener noreferrer"
+        target="_blank"
       >
         Full Article at 
       </a>
