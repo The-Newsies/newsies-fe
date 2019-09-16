@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function NewsViewToggle({ handleTrendingView, handleMyNewsView }) {
-  //these two <a>'s will be Router Links and the functions are to handle 
-  //when they are selected for styling purposes
+  //the functions are to handle when they are selected for styling purposes
   return (
     <span>
-      <a onClick={handleTrendingView}>Trending</a>
-      <a onClick={handleMyNewsView}>My News</a>
+      <Link to='/' onClick={handleTrendingView} >Trending</Link>
+      <Link to='/myNews' onClick={handleMyNewsView}>My News</Link>
     </span>
   );
 }
