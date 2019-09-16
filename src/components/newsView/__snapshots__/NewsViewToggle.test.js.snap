@@ -10,6 +10,7 @@ exports[`NewsViewToggle component renders NewsViewToggle 1`] = `
         "fontWeight": "bold",
       }
     }
+    className="link"
     to="/trending"
   >
     Trending
@@ -22,6 +23,7 @@ exports[`NewsViewToggle component renders NewsViewToggle 1`] = `
         "fontWeight": "bold",
       }
     }
+    className="link"
     to="/myNews"
   >
     My News
