@@ -7,6 +7,7 @@ import logo from '../../assets/logo.png';
 
 export default function Header() {
   const { isAuthenticated } = useAuth0();
+  
   return (
     <>
     <div className={styles.header}>

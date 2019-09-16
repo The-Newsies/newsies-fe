@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styles from './Tag.css';
 
 export default function Tag({ name, color, _id, handleClick }) {
-  
   const tagColorStyles = {
     background: color,
     width: '35px',
