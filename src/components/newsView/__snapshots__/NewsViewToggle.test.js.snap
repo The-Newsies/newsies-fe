@@ -2,15 +2,31 @@
 
 exports[`NewsViewToggle component renders NewsViewToggle 1`] = `
 <span>
-  <a
-    onClick={[Function]}
+  <NavLink
+    activeStyle={
+      Object {
+        "background": "red",
+        "color": "white",
+        "fontWeight": "bold",
+      }
+    }
+    className="link"
+    to="/trending"
   >
     Trending
-  </a>
-  <a
-    onClick={[Function]}
+  </NavLink>
+  <NavLink
+    activeStyle={
+      Object {
+        "background": "red",
+        "color": "white",
+        "fontWeight": "bold",
+      }
+    }
+    className="link"
+    to="/myNews"
   >
     My News
-  </a>
+  </NavLink>
 </span>
 `;
