@@ -3,8 +3,19 @@ import SearchBarContainer from '../../containers/SearchBarContainer';
 import Avatar from '../avatar/Avatar';
 import DropDownMenu from '../dropDownMenu/DropDownMenu';
 import styles from './MyViewWrapper.css';
+import PropTypes from 'prop-types';
 
-export default function MyViewWrapper() {
+export default function MyViewWrapper({ location }) {
+  if(location.pathname === '/myNews') {
+    return (
+      <div className={styles.container}>
+        <div className={styles.avatarSignOut}>
+          <Avatar />
+          <DropDownMenu />
+        </div>
+      </div>
+    );
+  }
   return (
     <div className={styles.container}>
       <div>
@@ -17,3 +28,7 @@ export default function MyViewWrapper() {
     </div>
   );
 }
+
+MyViewWrapper.propTypes = {
+  location: PropTypes.object.isRequired
+};

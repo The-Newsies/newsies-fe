@@ -1,12 +1,15 @@
 import React from 'react';
 import Header from '../components/header/Header';
-import TagsContainer from '../containers/TagsContainer';
+import PropTypes from 'prop-types';
 
-export default function MyNews() {
+export default function MyNews({ location }) {
   return (
     <>
-      <Header />
-      <TagsContainer />
+      <Header location={location}/>
     </>
   );
 }
+
+MyNews.propTypes = {
+  location: PropTypes.object.isRequired
+};
