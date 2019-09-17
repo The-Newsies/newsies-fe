@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Tag.css';
 
-export default function Tag({ name, color, _id, handleClick }) {
+export default function Tag({ name, color, fetchByCategory }) {
   const tagColorStyles = {
     background: color,
     width: '35px',
     height: '13px',
+    marginRight: '20px'
   };
 
   return (
     <div>
-      <button className={styles.button} onClick={() => handleClick(_id)}>
+      <button className={styles.button} onClick={() => fetchByCategory(name)}>
         <div style={tagColorStyles}></div>
         <p>{name}</p>
       </button>
@@ -20,9 +21,8 @@ export default function Tag({ name, color, _id, handleClick }) {
 }
 
 Tag.propTypes = {
-  _id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired
+  fetchByCategory: PropTypes.func.isRequired
 };
 

@@ -7,8 +7,7 @@ describe('Tag component', () => {
     const wrapper = shallow(<Tag 
       name={'Science'} 
       color={'FFF'}
-      handleClick={() => {}}
-      _id={'erereet'}
+      fetchByCategory={() => {}}
     />);
     expect(wrapper).toMatchSnapshot();
   });

@@ -8,7 +8,8 @@ import { fetchTags } from '../actions/tagsActions';
 class TagsContainer extends Component {
   static propTypes = {
     tags: PropTypes.array.isRequired,
-    fetch: PropTypes.func.isRequired
+    fetch: PropTypes.func.isRequired,
+    fetchByCategory: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -16,10 +17,10 @@ class TagsContainer extends Component {
   }
 
   render() {
-    const { tags } = this.props;
+    const { tags, fetchByCategory } = this.props;
 
     return (
-      <TagsList tags={tags} />
+      <TagsList tags={tags} fetchByCategory={fetchByCategory} />
     );
   }
 }
