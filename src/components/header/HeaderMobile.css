@@ -67,10 +67,14 @@ nav {
 
 .menuIconsClose img {
   width: 1rem;
+}
+
+.menuIconsClose {
   position: absolute;
   top: 1.5rem;
-  right: 1rem;
+  left: 1rem;
 }
+
 
 .navList {
   width: 10rem;
@@ -78,29 +82,7 @@ nav {
   background-color: red;
   position: fixed;
   top: 0;
-  left: -11rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1500;
-  transition: all 650ms ease-in-out;
-}
-
-.searchIconsClose img {
-  width: 1rem;
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-}
-
-.searchList {
-  width: 10rem;
-  height: 100vh;
-  background-color: red;
-  position: fixed;
-  top: 0;
-  right: -10rem;
+  left: -10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,10 +96,7 @@ nav {
 }
 
 .navItem {
-  margin: 1.5rem 0;
-}
-
-.navItem {
+  margin: .5rem 0;
   font-size: 1.2rem;
   color: #FFF;
   text-transform: uppercase;

@@ -7,6 +7,7 @@ import logoMobile from '../../assets/logoMobile.png';
 import menuStack from '../../assets/menuStack.png';
 import closeIcon from '../../assets/closeIcon.png';
 import searchIcon from '../../assets/searchIcon.png';
+import SearchBar from '../searchBar/SearchBar';
 
 export default function Header() {
 
@@ -22,8 +23,11 @@ export default function Header() {
     <header>
       <div className={styles.container}>
         <nav>
+          <div className={styles.navLogo}>
+            <i><img className={styles.logo} src={logoMobile} /></i>
+          </div> 
           <div className={styles.menuIconsOpen}>
-            <img src={menuStack} />
+            <i><img src={menuStack} /></i>
           </div>
           <ul className={styles.navList}>
             <div className={styles.menuIconsClose}>
@@ -40,27 +44,6 @@ export default function Header() {
             </li>
           </ul>  
 
-          <div className={styles.navLogo}>
-            <img className={styles.logo} src={logoMobile} />
-          </div> 
-
-          <div className={styles.menuIconsOpen}>
-            <img src={searchIcon} />
-          </div>
-          <ul className={styles.searchList}>
-            <div className={styles.searchIconsClose}>
-              <img src={closeIcon} />
-            </div>
-            <li className={styles.navItem}>
-              <a>Trending</a>
-            </li>
-            <li className={styles.navItem}>
-              <a>My News</a>
-            </li>
-            <li className={styles.navItem}>
-              <a>Sign Out</a>
-            </li>
-          </ul>  
           {/* {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper />} */}
         </nav>
       </div>
