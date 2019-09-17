@@ -4,6 +4,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import arrow from '../../assets/arrow.png';
 import { useAuth0 } from '../../Auth0Provider';
+import { NavLink } from 'react-router-dom';
 
 export default function DropDownMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -31,6 +32,18 @@ export default function DropDownMenu() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}><span onClick={logout}>Sign-out</span></MenuItem>
+        <MenuItem onClick={handleClose}><NavLink to='/trending' activeStyle={{ 
+          fontWeight: 'bold', 
+          color: 'white', 
+          background: 'red' }}>Trending</NavLink></MenuItem>
+        <MenuItem onClick={handleClose}><NavLink to='/search' activeStyle={{ 
+          fontWeight: 'bold', 
+          color: 'white', 
+          background: 'red' }}>Search</NavLink></MenuItem>
+        <MenuItem onClick={handleClose}><NavLink to='/myNews' activeStyle={{ 
+          fontWeight: 'bold', 
+          color: 'white', 
+          background: 'red' }}>My News</NavLink></MenuItem>
       </Menu>
     </div>
   );
