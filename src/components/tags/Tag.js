@@ -7,6 +7,7 @@ export default function Tag({ name, color, _id, handleClick }) {
     background: color,
     width: '35px',
     height: '13px',
+    marginRight: '20px'
   };
 
   return (

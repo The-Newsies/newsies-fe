@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tag from './Tag';
-import './TagsList.css';
+import style from './TagsList.css';
 
 export default function TagsList({ tags }) {
   const tagArray = tags.map(({ name, color, _id }) => (
@@ -11,9 +11,11 @@ export default function TagsList({ tags }) {
   ));
 
   return (
-    <ul>
-      {tagArray}
-    </ul>
+    <section className={style.TagsList}>
+      <ul>
+        {tagArray}
+      </ul>
+    </section>
   );
 }
 
