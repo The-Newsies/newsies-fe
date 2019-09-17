@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NewsItem from './NewsItem';
-import './NewsList.css';
+import styles from './NewsList.css';
 
 export default function NewsItemsList({ news }) {
   const newsList = news.map(({
@@ -29,7 +29,7 @@ export default function NewsItemsList({ news }) {
   ));
 
   return (
-    <ul>
+    <ul className={styles.container}>
       {newsList}
     </ul>
   );

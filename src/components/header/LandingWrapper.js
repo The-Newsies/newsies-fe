@@ -10,7 +10,7 @@ export default function LandingWrapper() {
   return (
     <div className={styles.container}>
       <SearchBarContainer />
-      <button onClick={login}>Sign-in | Sign-up</button>
+      <p className={styles.signIn} onClick={login}>SIGN-IN</p>
     </div>
   );
 }
