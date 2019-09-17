@@ -1,3 +1,15 @@
 .container {
   display: flex;
+  flex-direction: column;
+}
+
+.signIn {
+  color: black;
+  cursor: pointer;
+  font-size: .8rem;
+  margin-left: 8rem;
+}
+
+.signIn:hover {
+  color: red;
 }
