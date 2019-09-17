@@ -4,7 +4,7 @@ import styles from './NewsViewToggle.css';
 
 export default function NewsViewToggle() {
   return (
-    <span>
+    <span className={styles.viewToggle}>
       <NavLink to='/trending' className={styles.link} activeStyle={{ 
         fontWeight: 'bold', 
         color: 'white', 

@@ -1,18 +1,18 @@
-// .header {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-// .logo {
-//   width: 250px;
-// }
+.logo {
+  width: 250px;
+}
 
-// .line {
-//   width: 90%;
-//   height: 1px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   background-color:rgba(102, 102, 102, 0.932);
-//   border: 0 none;
-// }
+.line {
+  width: 90%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:rgba(102, 102, 102, 0.932);
+  border: 0 none;
+}

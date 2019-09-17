@@ -3,3 +3,8 @@
   color: black;
   margin-right: 5px;
 }
+
+.viewToggle {
+  display: flex;
+  left: 0;
+}

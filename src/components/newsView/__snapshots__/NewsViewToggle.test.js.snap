@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsViewToggle component renders NewsViewToggle 1`] = `
-<span>
+<span
+  className="viewToggle"
+>
   <NavLink
     activeStyle={
       Object {

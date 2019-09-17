@@ -8,15 +8,11 @@ import menuStack from '../../assets/menuStack.png';
 import closeIcon from '../../assets/closeIcon.png';
 import searchIcon from '../../assets/searchIcon.png';
 import SearchBar from '../searchBar/SearchBar';
+import NewsViewToggle from '../newsView/NewsViewToggle';
 
 export default function Header() {
 
   const { isAuthenticated } = useAuth0();
-
-  // const selectElement = (s) => document.querySelector(s);
-  // selectElement(s: '.menuIconsOpen').addEventListener('click', () => {
-  //   selectElement(s: '.nav-list').classList.add('active');
-  // });
 
   return (
     <>
@@ -46,8 +42,11 @@ export default function Header() {
 
           {/* {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper />} */}
         </nav>
+        <SearchBar />
+        <NewsViewToggle />
       </div>
     </header>
+
   </>
   );
 }
