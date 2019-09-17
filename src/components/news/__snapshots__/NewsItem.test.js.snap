@@ -5,14 +5,16 @@ exports[`NewsItem component renders NewsItem 1`] = `
   className="container"
 >
   <div
-    style={
-      Object {
-        "background": "tagColor",
-        "height": "170px",
-        "width": "30px",
-      }
-    }
-  />
+    className="linkContainer"
+  >
+    <a
+      href="url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      View at 
+    </a>
+  </div>
   <div
     className="imageContainer"
   >
@@ -26,11 +28,13 @@ exports[`NewsItem component renders NewsItem 1`] = `
     <h3>
       title
     </h3>
-    <p>
+    <p
+      className="title"
+    >
       description
     </p>
-    <div
-      className="links"
+    <footer
+      className="source"
     >
       <p>
         Published: 
@@ -40,14 +44,7 @@ exports[`NewsItem component renders NewsItem 1`] = `
         Author: 
         author
       </p>
-      <a
-        href="url"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Full Article at 
-      </a>
-    </div>
+    </footer>
   </div>
 </div>
 `;

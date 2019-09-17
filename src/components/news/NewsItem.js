@@ -9,29 +9,24 @@ export default function NewsItem({
   author, 
   url, 
   source, 
-  urlToImage,
-  tagColor }) {
+  urlToImage }) {
 
-  const tagColorStyles = {
-    background: tagColor,
-    width: '30px',
-    height: '170px',
-  };
 
   return (
     <div className={styles.container}>
-      <div style={tagColorStyles}></div>
+      <div className={styles.linkContainer}>
+        <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
+      </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />
       </div>
       <div className={styles.titleContainer}>
         <h3>{title}</h3>
-        <p>{description}</p>
-        <div className={styles.links}>
+        <p className={styles.title}>{description}</p>
+        <footer className={styles.source}>
           <p>Published: {publishedAt}</p>
           <p>Author: {author}</p>
-          <a href={url} rel='noopener noreferrer' target='_blank'>Full Article at {source.name}</a>
-        </div>
+        </footer>
       </div>
     </div>
   );
