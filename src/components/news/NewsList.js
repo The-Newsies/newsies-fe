@@ -11,8 +11,7 @@ export default function NewsItemsList({ news }) {
     author,
     publishedAt,
     source,
-    url,
-    handleCollectionClick
+    url
   }) => (
     <li key={url}>
       <NewsItem 
@@ -23,7 +22,6 @@ export default function NewsItemsList({ news }) {
         publishedAt={publishedAt}
         source={source}
         url={url}
-        handleCollectionClick={handleCollectionClick}
       />
     </li>
   ));
@@ -47,6 +45,5 @@ NewsItemsList.propTypes = {
       id: PropTypes.string.isRequired
     }).isRequired,
     url: PropTypes.string.isRequired,
-    handleCollectionClick: PropTypes.func.isRequired
   })).isRequired
 };
