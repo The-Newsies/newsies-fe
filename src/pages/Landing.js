@@ -1,13 +1,17 @@
 import React from 'react';
-import HeaderMobile from '../components/header/HeaderMobile';
-import TrendingContainer from '../containers/TrendingContainer';
+import Header from '../components/header/Header';
+import NewsContainer from '../containers/NewsContainer';
+import PropTypes from 'prop-types';
 
-export default function Landing() {
+export default function Landing({ location }) {
   return (
     <>
-      <HeaderMobile />
-      {/* <TrendingContainer /> */}
+      <Header location={location}/>
+      <NewsContainer />
     </>
   );
 }
 
+Landing.propTypes = {
+  location: PropTypes.object.isRequired
+};

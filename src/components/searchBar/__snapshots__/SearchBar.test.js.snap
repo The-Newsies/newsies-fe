@@ -6,7 +6,12 @@ exports[`SearchBar component renders SearchBar 1`] = `
     onChange={[Function]}
     placeholder="  search"
     type="text"
-    value="hello"
+    value=""
   />
+  <button
+    onClick={[Function]}
+  >
+    Search!
+  </button>
 </div>
 `;

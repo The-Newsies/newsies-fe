@@ -4,17 +4,22 @@ import LandingWrapper from './LandingWrapper';
 import MyViewWrapper from './MyViewWrapper';
 import styles from './Header.css';
 import logo from '../../assets/logo.png';
+import PropTypes from 'prop-types';
 
-export default function Header() {
+export default function Header({ location }) {
   const { isAuthenticated } = useAuth0();
   
   return (
     <>
     <div className={styles.header}>
       <img className={styles.logo} src={logo} />
-      {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper />}
+      {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper location={location} />}
     </div>
     <hr className={styles.line} />
     </>
   );
 }
+
+Header.propTypes = {
+  location: PropTypes.object.isRequired
+};

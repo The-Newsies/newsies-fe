@@ -30,7 +30,7 @@ export default function NewsItem({
         <div className={styles.links}>
           <p>Published: {publishedAt}</p>
           <p>Author: {author}</p>
-          <a href={url}>Full Article at {source.name}</a>
+          <a href={url} rel='noopener noreferrer' target='_blank'>Full Article at {source.name}</a>
         </div>
       </div>
     </div>
