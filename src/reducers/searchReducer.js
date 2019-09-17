@@ -1,4 +1,6 @@
-import { FETCH_SEARCH_ALL, FETCH_SEARCH_BY_CATEGORY, FETCH_LOADING_SEARCH } from '../actions/searchActions';
+import { FETCH_SEARCH_ALL,
+  FETCH_SEARCH_BY_CATEGORY, 
+  FETCH_LOADING_SEARCH } from '../actions/searchActions';
 
 const initialState = {
   articles: [],
