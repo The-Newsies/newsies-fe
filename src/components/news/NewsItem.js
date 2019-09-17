@@ -9,13 +9,15 @@ export default function NewsItem({
   author, 
   url, 
   source, 
-  urlToImage }) {
+  urlToImage, 
+  handleCollectionClick }) {
 
 
   return (
     <div className={styles.container}>
       <div className={styles.linkContainer}>
         <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
+        <button onClick={handleCollectionClick}>➕</button>
       </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />
@@ -43,5 +45,5 @@ NewsItem.propTypes = {
     id: PropTypes.string
   }).isRequired,
   url: PropTypes.string.isRequired,
-  tagColor: PropTypes.string.isRequired
+  handleCollectionClick: PropTypes.func.isRequired
 };

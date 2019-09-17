@@ -12,7 +12,7 @@ export default function NewsItemsList({ news }) {
     publishedAt,
     source,
     url,
-    tagColor
+    handleCollectionClick
   }) => (
     <li key={url}>
       <NewsItem 
@@ -23,7 +23,7 @@ export default function NewsItemsList({ news }) {
         publishedAt={publishedAt}
         source={source}
         url={url}
-        tagColor={tagColor}
+        handleCollectionClick={handleCollectionClick}
       />
     </li>
   ));
@@ -47,6 +47,6 @@ NewsItemsList.propTypes = {
       id: PropTypes.string.isRequired
     }).isRequired,
     url: PropTypes.string.isRequired,
-    tagColor: PropTypes.string.isRequired
+    handleCollectionClick: PropTypes.func.isRequired
   })).isRequired
 };

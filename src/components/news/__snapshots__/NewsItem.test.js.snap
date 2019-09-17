@@ -14,6 +14,9 @@ exports[`NewsItem component renders NewsItem 1`] = `
     >
       View at 
     </a>
+    <button>
+      ➕
+    </button>
   </div>
   <div
     className="imageContainer"

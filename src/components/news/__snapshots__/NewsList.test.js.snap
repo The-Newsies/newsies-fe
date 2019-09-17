@@ -8,7 +8,6 @@ exports[`NewsList component renders NewsList 1`] = `
     <NewsItem
       author="author"
       description="description"
-      tagColor="tagColor"
       title="Title"
     />
   </li>
