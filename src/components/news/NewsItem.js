@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewsItem.css';
+import { useAuth0 } from '../../Auth0Provider';
 
 export default function NewsItem({ 
   title, 
@@ -11,13 +12,13 @@ export default function NewsItem({
   source, 
   urlToImage, 
   handleCollectionClick }) {
-
+  const { isAuthenticated } = useAuth0();
 
   return (
     <div className={styles.container}>
       <div className={styles.linkContainer}>
         <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
-        <button onClick={handleCollectionClick}>➕</button>
+        {isAuthenticated ? <button onClick={handleCollectionClick}>➕</button> : <></>}
       </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />
