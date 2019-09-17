@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionList component renders CollectionList 1`] = `
+<ul>
+  <li
+    key="id"
+  >
+    <CollectionItem
+      description="description"
+      title="Title"
+    />
+  </li>
+</ul>
+`;
