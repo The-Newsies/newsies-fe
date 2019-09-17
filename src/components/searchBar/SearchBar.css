@@ -1,0 +1,5 @@
+input[type=text] {
+  margin-top: .5rem;
+  border: 2px solid red;
+  border-radius: 10px;
+}

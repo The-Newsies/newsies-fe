@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500&display=swap');
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.logo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.menuIconsOpen img {
+  width: 15px;
+}
+
+.menuIconsClose img {
+  width: 15px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.navLogo {
+  width: 1rem
+}
+
+.menuIconsOpen img {
+  width: 1.7rem;
+}
+
+.menuIconsClose img {
+  width: 1rem;
+}
+
+.menuIconsClose {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+}
+
+
+.navList {
+  width: 10rem;
+  height: 100vh;
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: -10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  transition: all 650ms ease-in-out;
+}
+
+.navList.active {
+  left: 0;
+}
+
+.navItem {
+  margin: .5rem 0;
+  font-size: 1.2rem;
+  color: #FFF;
+  text-transform: uppercase;
+}

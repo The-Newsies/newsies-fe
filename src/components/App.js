@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Landing from '../pages/Landing';
 import MyNews from '../pages/MyNews';
 import { withSession } from '../Auth0Provider';
+import './App.css';
 import Search from '../pages/Search';
 
 export default function App() {

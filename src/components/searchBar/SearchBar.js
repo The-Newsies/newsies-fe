@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './SearchBar.css';
 
 function SearchBar({ handleClick }) {
   const [search, setSearch] = useState('');
