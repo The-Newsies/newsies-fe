@@ -5,6 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import arrow from '../../assets/arrow.png';
 import { useAuth0 } from '../../Auth0Provider';
 import { NavLink } from 'react-router-dom';
+import styles from './DropDownMenu.css';
 
 export default function DropDownMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -22,7 +23,7 @@ export default function DropDownMenu() {
   return (
     <div>
       <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <img style={{ width: '3vw' }} src={arrow} />
+        <img style={{ width: '1rem' }} src={arrow} />
       </Button>
       <Menu
         id="simple-menu"
@@ -31,19 +32,16 @@ export default function DropDownMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
+        <MenuItem onClick={handleClose}><NavLink to='/trending' className={styles.link} activeStyle={{ 
+          fontWeight: 'bold',
+          color: 'red' }}>Trending</NavLink></MenuItem>
+        <MenuItem onClick={handleClose}><NavLink to='/search' className={styles.link} activeStyle={{ 
+          fontWeight: 'bold', 
+          color: 'red' }}>Search</NavLink></MenuItem>
+        <MenuItem onClick={handleClose}><NavLink to='/myNews' className={styles.link} activeStyle={{ 
+          fontWeight: 'bold', 
+          color: 'red' }}>My News</NavLink></MenuItem>
         <MenuItem onClick={handleClose}><span onClick={logout}>Sign-out</span></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink to='/trending' activeStyle={{ 
-          fontWeight: 'bold', 
-          color: 'white', 
-          background: 'red' }}>Trending</NavLink></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink to='/search' activeStyle={{ 
-          fontWeight: 'bold', 
-          color: 'white', 
-          background: 'red' }}>Search</NavLink></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink to='/myNews' activeStyle={{ 
-          fontWeight: 'bold', 
-          color: 'white', 
-          background: 'red' }}>My News</NavLink></MenuItem>
       </Menu>
     </div>
   );
