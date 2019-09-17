@@ -11,6 +11,7 @@ exports[`Tag component renders Tag 1`] = `
         Object {
           "background": "FFF",
           "height": "13px",
+          "marginRight": "20px",
           "width": "35px",
         }
       }

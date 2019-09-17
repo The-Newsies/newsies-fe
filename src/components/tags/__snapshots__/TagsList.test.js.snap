@@ -1,14 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TagsList component renders TagsList 1`] = `
-<ul>
-  <li
-    key="erereet"
-  >
-    <Tag
-      color="werwer"
-      name="art"
-    />
-  </li>
-</ul>
+<section
+  className="TagsList"
+>
+  <ul>
+    <li
+      key="erereet"
+    >
+      <Tag
+        color="werwer"
+        fetchByCategory={[Function]}
+        name="art"
+      />
+    </li>
+  </ul>
+</section>
 `;

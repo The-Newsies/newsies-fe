@@ -1,4 +1,4 @@
-import { getTrending } from '../services/newsApi';
+import { getTrending, getSearchByCategory } from '../services/newsApi';
 
 export const FETCH_TRENDING = 'FETCH_TRENDING';
 export const FETCH_LOADING_TRENDING = 'FETCH_LOADING_TRENDING';
@@ -9,3 +9,9 @@ export const fetchTrending = () => ({
   pendingType: FETCH_LOADING_TRENDING
 });
 
+export const FETCH_SEARCH_BY_CATEGORY = 'FETCH_SEARCH_BY_CATEGORY';
+export const fetchSearchByCategory = (searchTerm, category) => ({
+  type: FETCH_SEARCH_BY_CATEGORY,
+  payload: getSearchByCategory(searchTerm, category),
+  pendingType: FETCH_LOADING_TRENDING
+});
