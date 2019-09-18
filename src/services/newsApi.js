@@ -1,7 +1,7 @@
 import placeholder from '../assets/newsPlaceholder.jpg';
 // top headlines
 export const getTrending = () => {
-  return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWS_API_KEY}`)
+  return fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=${process.env.NEWS_API_KEY}`)
     .then(res => {
       if(!res.ok) throw 'unable to fetch trending';
       return res.json();
@@ -59,7 +59,7 @@ export const getSearchAll = (searchTerm) => {
 
 // top headlines
 export const getSearchByCategory = (searchTerm, category = '') => {
-  return fetch(`https://newsapi.org/v2/top-headlines?country=us&q=${searchTerm}&category=${category}&apiKey=${process.env.NEWS_API_KEY}`)
+  return fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=100&q=${searchTerm}&category=${category}&apiKey=${process.env.NEWS_API_KEY}`)
     .then(res => {
       if(!res.ok) throw 'unable to fetch trending by search';
       return res.json();
