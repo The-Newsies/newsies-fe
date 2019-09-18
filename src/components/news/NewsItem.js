@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewsItem.css';
 import { useAuth0 } from '../../Auth0Provider';
-import CollectionModal from '../collectionForm/CollectionModal';
+import CollectionModalContainer from '../../containers/CollectionModalContainer';
 
 export default function NewsItem({ article }) {
   const { isAuthenticated } = useAuth0();
@@ -20,7 +20,7 @@ export default function NewsItem({ article }) {
     <div className={styles.container}>
       <div className={styles.linkContainer}>
         <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
-        {isAuthenticated ?  <CollectionModal article={article} /> : <></>}
+        {isAuthenticated ?  <CollectionModalContainer article={article} /> : <></>}
       </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />

@@ -9,7 +9,7 @@ describe('collectionsSelector tests', () => {
         articleIds: []
       }]
     };
-    console.log(collections)
+
     const collections = getUserCollections(state);
 
     expect(collections).toEqual([{ _id: null,

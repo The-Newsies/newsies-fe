@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CollectionModal({ article, collections }) {
+export default function CollectionModal({ article, collections, fetchUserCollections }) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
@@ -38,6 +38,7 @@ export default function CollectionModal({ article, collections }) {
 
   const handleOpen = () => {
     setOpen(true);
+    fetchUserCollections();
   };
 
   const handleClose = () => {
@@ -65,5 +66,6 @@ export default function CollectionModal({ article, collections }) {
 
 CollectionModal.propTypes = {
   article: PropTypes.object.isRequired,
-  collections: PropTypes.array.isRequired
+  collections: PropTypes.array.isRequired,
+  fetchUserCollections: PropTypes.func.isRequired
 };
