@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import SelectCollection from './SelectCollection';
+import PropTypes from 'prop-types';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -28,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SimpleModal() {
+export default function CollectionModal({ article, collections }) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
@@ -54,9 +56,14 @@ export default function SimpleModal() {
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-          <p>This is where our form component will live</p>
+          <SelectCollection article={article} collections={collections} />
         </div>
       </Modal>
     </div>
   );
 }
+
+CollectionModal.propTypes = {
+  article: PropTypes.object.isRequired,
+  collections: PropTypes.array.isRequired
+};
