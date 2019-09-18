@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CollectionModal({ article, collections, fetchUserCollections, createCollection }) {
+export default function CollectionModal({ article, collections, fetchUserCollections, createCollection, handleSubmit }) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
@@ -58,7 +58,7 @@ export default function CollectionModal({ article, collections, fetchUserCollect
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-          <SelectCollection article={article} collections={collections} />
+          <SelectCollection article={article} collections={collections} handleSubmit={handleSubmit} />
           <AddCollection createCollection={createCollection}/>
         </div>
       </Modal>

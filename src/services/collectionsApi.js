@@ -13,3 +13,14 @@ export const postCollection = (name, description) => {
       })
   );
 };
+
+export const patchArticleToCollection = (articleId, collectionId) => {
+  return (
+    request(`${process.env.API_URL}/collections/${collectionId}/add-article/`,
+      {
+        method: 'PATCH',
+        body: JSON.stringify({ articleId })
+      }
+    )
+  );
+};

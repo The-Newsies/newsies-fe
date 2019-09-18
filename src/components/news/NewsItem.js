@@ -47,7 +47,7 @@ NewsItem.propTypes = {
     source: PropTypes.shape({ 
       name: PropTypes.string,
       id: PropTypes.string
-    }).isRequired,
+    }),
     url: PropTypes.string.isRequired,
   })
 };

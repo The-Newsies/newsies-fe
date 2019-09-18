@@ -7,12 +7,12 @@ export default function SelectCollection({ collections, handleSubmit, article })
   const collectionItems = collections.map(collection => {
     return (
       <li key={collection._id}>
-        <div onClick={() => setSelected(collection._id)}>{collection.name}</div>
+        <span onClick={() => setSelected(collection._id)}>{collection.name}</span>
       </li>);
   });
 
   return (
-    <form onSubmit={() => handleSubmit(article, isSelected)}>
+    <form onSubmit={(event) => { event.preventDefault(); handleSubmit(article, isSelected);}}>
       <ul>
         {collectionItems}
       </ul>

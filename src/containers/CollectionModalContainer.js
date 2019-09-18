@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import CollectionModal from '../components/collectionForm/CollectionModal';
 import { fetchCollections } from '../actions/collectionsActions';
 import { getUserCollections } from '../selectors/collectionsSelector';
-import { postCollection } from '../services/collectionsApi';
+import { postCollection, patchArticleToCollection } from '../services/collectionsApi';
+import { postArticle } from '../services/articlesApi';
 
 class CollectionModalContainer extends Component {
   static propTypes = {
@@ -40,7 +41,14 @@ const mapDispatchToProps = dispatch => ({
     dispatch(fetchCollections());
   },
   createCollection(name, description) {
-    dispatch(postCollection(name, description));
+    postCollection(name, description)
+      .then(() => dispatch(fetchCollections()));
+  },
+  handleSubmit(article, isSelected) {
+    postArticle(article)
+      .then(newArticle => {
+        patchArticleToCollection(newArticle._id, isSelected);
+      });
   }
 });
 
