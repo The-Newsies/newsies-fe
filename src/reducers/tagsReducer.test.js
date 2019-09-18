@@ -9,7 +9,10 @@ jest.mock('../services/tagsApi.js', () => ({
 
 describe('tagsReducer', () => {
   it('returns default state', () => {
-    const state = [{ name: '', color: '', _id: '' }];
+    const state = {
+      tags: [{ name: '', color: '', _id: '' }],
+      selectedTag: ''
+    };
 
     const action = {
       type: 'Conchas',
@@ -21,11 +24,14 @@ describe('tagsReducer', () => {
   });
 
   it('returns tags and updates state', () => {
-    const state = [{ name: '', color: '', _id:'' }];
+    const state = {
+      tags: [{ name: '', color: '', _id: '' }],
+      selectedTag: ''
+    };
 
     const action = fetchTags();
 
     const newState = tagsReducer(state, action);
-    expect(newState).toEqual([{ name: 'sports', color: 'FFFFF', _id: 'j5fy79' }]);
+    expect(newState).toEqual({ tags: [{ name: 'sports', color: 'FFFFF', _id: 'j5fy79' }], selectedTag: '' });
   });
 });

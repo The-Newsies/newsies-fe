@@ -11,7 +11,9 @@ exports[`TagsList component renders TagsList 1`] = `
       <Tag
         color="werwer"
         fetchByCategory={[Function]}
+        isSelected={false}
         name="art"
+        setSelectedTag={[Function]}
       />
     </li>
   </ul>

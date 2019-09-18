@@ -8,6 +8,8 @@ describe('Tag component', () => {
       name={'Science'} 
       color={'FFF'}
       fetchByCategory={() => {}}
+      setSelectedTag={() => {}}
+      isSelected={false}
     />);
     expect(wrapper).toMatchSnapshot();
   });

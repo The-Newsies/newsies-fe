@@ -1,10 +1,18 @@
 .button {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
   width: 200px;
+  background: white;
 }
 
 .button:hover {
   background: rgb(165, 165, 165);
+}
+
+.buttonSelected {
+  display: flex;
+  align-items: center;
+  background: grey;
+  color: black;
+  width: 200px;
 }
