@@ -3,6 +3,7 @@ import NewsList from '../components/news/NewsList';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getSearchResults, getLoading } from '../selectors/searchSelector';
+import Loading from '../components/loading/Loading';
 
 class SearchContainer extends Component {
   static propTypes = {
@@ -12,7 +13,7 @@ class SearchContainer extends Component {
 
   render() {
     const { articles, loading } = this.props;
-    if(loading) return <h1>LOADING</h1>;
+    if(loading) return <Loading />;
     return (
       <NewsList news={articles} />
     );

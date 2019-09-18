@@ -1,0 +1,46 @@
+.container {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+}
+
+.loading img {
+  width: 200px;
+}
+
+.loading {  
+  margin-top: 5rem;
+  max-width: 50%;  
+  line-height: 1.4;  
+  font-size: 1.6rem;  
+  font-weight: bold;  
+  text-align: center;
+}
+
+.loading section {
+  padding-top: 1rem;
+}
+
+.loadingAnim {  
+  width: 60px;  
+  height: 60px;  
+  display: inline-block;  
+  border: 10px solid rgba(189,189,189 ,0.25);  
+  border-left-color: rgba(255,51,52 ,1);  
+  border-top-color: rgba(255,51,52 ,1);  
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+
+
+
+
+
