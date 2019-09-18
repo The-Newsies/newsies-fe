@@ -8,12 +8,14 @@ describe('NewsList component', () => {
       news={[{
         title: 'Title',
         description: 'description',
-        image: 'image url',
+        urlToImage: 'image url',
         author: 'author',
-        date: 'date',
-        sourceName: 'sourceName',
-        sourceLink: 'sourceLink',
-        tagColor: 'tagColor'
+        publishedAt: 'date',
+        source: {
+          name: 'name',
+          id: 'ddgdgd'
+        },
+        url: 'sourceLink'
       }]}
     />);
     expect(wrapper).toMatchSnapshot();

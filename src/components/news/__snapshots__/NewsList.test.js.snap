@@ -4,12 +4,22 @@ exports[`NewsList component renders NewsList 1`] = `
 <ul
   className="container"
 >
-  <li>
+  <li
+    key="sourceLink"
+  >
     <NewsItem
       author="author"
       description="description"
-      tagColor="tagColor"
+      publishedAt="date"
+      source={
+        Object {
+          "id": "ddgdgd",
+          "name": "name",
+        }
+      }
       title="Title"
+      url="sourceLink"
+      urlToImage="image url"
     />
   </li>
 </ul>

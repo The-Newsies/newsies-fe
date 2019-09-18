@@ -9,7 +9,9 @@ class TagsContainer extends Component {
   static propTypes = {
     tags: PropTypes.array.isRequired,
     fetch: PropTypes.func.isRequired,
-    fetchByCategory: PropTypes.func.isRequired
+    fetchByCategory: PropTypes.func.isRequired,
+    setSelectedTag: PropTypes.func.isRequired,
+    selected: PropTypes.string
   }
 
   componentDidMount() {
@@ -17,10 +19,10 @@ class TagsContainer extends Component {
   }
 
   render() {
-    const { tags, fetchByCategory } = this.props;
+    const { tags, fetchByCategory, setSelectedTag, selected } = this.props;
 
     return (
-      <TagsList tags={tags} fetchByCategory={fetchByCategory} />
+      <TagsList tags={tags} fetchByCategory={fetchByCategory} setSelectedTag={setSelectedTag} selected={selected} />
     );
   }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewsItem.css';
+import { useAuth0 } from '../../Auth0Provider';
+import CollectionModal from '../collectionForm/CollectionModal';
 
 export default function NewsItem({ 
   title, 
@@ -10,12 +12,13 @@ export default function NewsItem({
   url, 
   source, 
   urlToImage }) {
-
+  const { isAuthenticated } = useAuth0();
 
   return (
     <div className={styles.container}>
       <div className={styles.linkContainer}>
         <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
+        {isAuthenticated ?  <CollectionModal /> : <></>}
       </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />
@@ -43,5 +46,4 @@ NewsItem.propTypes = {
     id: PropTypes.string
   }).isRequired,
   url: PropTypes.string.isRequired,
-  tagColor: PropTypes.string.isRequired
 };

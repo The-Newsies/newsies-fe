@@ -5,14 +5,18 @@ import PropTypes from 'prop-types';
 import { getTrending, getLoading } from '../selectors/trendingSelector';
 import { fetchTrending } from '../actions/trendingActions';
 import { fetchSearchByCategory } from '../actions/trendingActions';
+import { setTag } from '../actions/tagsActions';
 import TagsContainer from './TagsContainer';
+import { currentTag } from '../selectors/tagsSelector';
 
 class TrendingContainer extends Component {
   static propTypes = {
     articles: PropTypes.array.isRequired,
     loading: PropTypes.bool.isRequired,
     fetch: PropTypes.func.isRequired,
-    fetchByCategory: PropTypes.func.isRequired
+    fetchByCategory: PropTypes.func.isRequired,
+    setSelectedTag: PropTypes.func.isRequired,
+    selected: PropTypes.string
   }
 
   componentDidMount() {
@@ -20,11 +24,11 @@ class TrendingContainer extends Component {
   }
 
   render() {
-    const { articles, loading, fetchByCategory } = this.props;
+    const { articles, loading, fetchByCategory, setSelectedTag, selected } = this.props;
     if(loading) return <h1>LOADING</h1>;
     return (
       <>
-      <TagsContainer fetchByCategory={fetchByCategory}/>
+      <TagsContainer fetchByCategory={fetchByCategory} setSelectedTag={setSelectedTag} selected={selected} />
       <NewsList news={articles} />
       </>
     );
@@ -33,7 +37,8 @@ class TrendingContainer extends Component {
 
 const mapStateToProps = state => ({
   articles: getTrending(state),
-  loading: getLoading(state)
+  loading: getLoading(state),
+  selected: currentTag(state)
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -42,6 +47,9 @@ const mapDispatchToProps = dispatch => ({
   },
   fetchByCategory(category) {
     dispatch(fetchSearchByCategory('', category));
+  },
+  setSelectedTag(category) {
+    dispatch(setTag(category));
   }
 });
 

@@ -5,3 +5,9 @@ export const fetchTags = () => ({
   type: FETCH_TAGS,
   payload: getTags()
 });
+
+export const SET_TAG = 'SET_TAG';
+export const setTag = (name) => ({
+  type: SET_TAG,
+  payload: name
+});
