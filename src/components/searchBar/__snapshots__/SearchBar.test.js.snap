@@ -9,9 +9,10 @@ exports[`SearchBar component renders SearchBar 1`] = `
     value=""
   />
   <button
+    className="searchButton"
     onClick={[Function]}
   >
-    Search!
+    Search
   </button>
 </div>
 `;
