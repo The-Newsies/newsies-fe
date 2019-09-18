@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './NewsItem.css';
 import { useAuth0 } from '../../Auth0Provider';
 import CollectionModal from '../collectionForm/CollectionModal';
+import Sentiment from 'sentiment';
 
 export default function NewsItem({ 
   title, 
@@ -13,6 +14,11 @@ export default function NewsItem({
   source, 
   urlToImage }) {
   const { isAuthenticated } = useAuth0();
+
+  // sentiment analysis
+  const sentiment = new Sentiment();
+  const result = sentiment.analyze(title);
+  const score = result.score;
 
   return (
     <div className={styles.container}>
@@ -26,6 +32,7 @@ export default function NewsItem({
       <div className={styles.titleContainer}>
         <h3>{title}</h3>
         <p className={styles.title}>{description}</p>
+        <p>Sentiment Score: {score}</p>
         <footer className={styles.source}>
           <p>Published: {publishedAt}</p>
           <p>Author: {author}</p>
