@@ -6,8 +6,7 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
   const tagColorStyles = {
     background: color,
     width: '35px',
-    height: '13px',
-    marginRight: '20px'
+    height: '13px'
   };
 
   function wrapper() {

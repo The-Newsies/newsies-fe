@@ -12,6 +12,7 @@ input[type=text] {
 
 .searchButton {
   height: 1.4rem;
+  border: rgb(160, 160, 160) 1px solid;
 }
 
 .searchButton:hover {
