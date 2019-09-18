@@ -5,7 +5,7 @@ import {
 } from './searchActions';
 
 jest.mock('../services/newsApi.js', () => ({
-  getSearchAll: () => Promise,
+  getSearchAll: () => Promise
 }));
 
 describe('search actions', () => {
