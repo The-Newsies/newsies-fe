@@ -1,6 +1,6 @@
 import tagsReducer from './tagsReducer';
 import {
-  fetchTags
+  fetchTags, setTag
 } from '../actions/tagsActions';
 
 jest.mock('../services/tagsApi.js', () => ({
@@ -33,5 +33,17 @@ describe('tagsReducer', () => {
 
     const newState = tagsReducer(state, action);
     expect(newState).toEqual({ tags: [{ name: 'sports', color: 'FFFFF', _id: 'j5fy79' }], selectedTag: '' });
+  });
+
+  it('returns selectedTag and updates state', () => {
+    const state = {
+      tags: [{ name: '', color: '', _id: '' }],
+      selectedTag: ''
+    };
+
+    const action = setTag('science');
+
+    const newState = tagsReducer(state, action);
+    expect(newState).toEqual({ tags: [{ name: '', color: '', _id: '' }], selectedTag: 'science' });
   });
 });
