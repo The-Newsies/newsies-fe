@@ -10,7 +10,11 @@ export default function LandingWrapper() {
   return (
     <div className={styles.container}>
       <SearchBarContainer />
-      <p className={styles.signIn} onClick={login}>SIGN-IN</p>
+      <div className={styles.trendingSignin}>
+        <a className={styles.trending} href='/'>TRENDING NEWS</a>
+        <p className={styles.divider}>|</p>
+        <p className={styles.signIn} onClick={login}>SIGN-IN</p>
+      </div>
     </div>
   );
 }

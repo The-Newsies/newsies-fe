@@ -1,8 +1,10 @@
 .button {
   display: flex;
   align-items: center;
-  width: 200px;
+  justify-content: space-evenly;
+  width: 175px;
   background: white;
+  border: rgb(160, 160, 160) 1px solid;
 }
 
 .button:hover {
@@ -12,7 +14,12 @@
 .buttonSelected {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   background: grey;
   color: black;
-  width: 200px;
+  width: 175px;
+}
+
+.button p {
+  font-size: .8rem;
 }

@@ -8,7 +8,7 @@ export default function NewsItem({
   title, 
   description, 
   publishedAt, 
-  author, 
+  // author, 
   url, 
   source, 
   urlToImage }) {
@@ -24,11 +24,11 @@ export default function NewsItem({
         <img src={urlToImage} />
       </div>
       <div className={styles.titleContainer}>
-        <h3>{title}</h3>
-        <p className={styles.title}>{description}</p>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.description}>{description}</p>
         <footer className={styles.source}>
           <p>Published: {publishedAt}</p>
-          <p>Author: {author}</p>
+          {/* <p>Author: {author}</p> */}
         </footer>
       </div>
     </div>
