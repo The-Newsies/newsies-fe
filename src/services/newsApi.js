@@ -43,7 +43,7 @@ export const getSearchMultiple = (searchArray) => {
 
 // everything
 export const getSearchAll = (searchTerm) => {
-  return fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWS_API_KEY}`)
+  return fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&pageSize=100&apiKey=${process.env.NEWS_API_KEY}`)
     .then(res => {
       if(!res.ok) throw 'unable to fetch searchAll';
       return res.json();

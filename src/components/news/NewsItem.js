@@ -17,7 +17,7 @@ export default function NewsItem({
 
   // sentiment analysis
   const sentiment = new Sentiment();
-  const result = sentiment.analyze(title);
+  const result = sentiment.analyze(description || title || '');
   const score = result.score;
 
   return (

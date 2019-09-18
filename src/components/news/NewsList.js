@@ -8,7 +8,8 @@ export default function NewsItemsList({ news }) {
   const newsWithSentiment = news.map(article => {
     // sentiment analysis
     const sentiment = new Sentiment();
-    const result = sentiment.analyze(article.title);
+    const result = sentiment.analyze(article.description || article.title || '');
+    console.log(result);
     const score = result.score;
     return { ...article, sentiment: score };
   });
@@ -28,8 +29,8 @@ export default function NewsItemsList({ news }) {
   }) => (
     <li key={url}>
       <NewsItem 
-        title={title}
-        description={description || 'no description'}
+        title={title || 'No title'}
+        description={description || 'No description'}
         urlToImage={urlToImage}
         author={author}
         publishedAt={publishedAt}
@@ -48,7 +49,7 @@ export default function NewsItemsList({ news }) {
 
 NewsItemsList.propTypes = {
   news: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     description: PropTypes.string,
     urlToImage: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
