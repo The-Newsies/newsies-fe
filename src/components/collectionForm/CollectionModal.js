@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import SelectCollection from './SelectCollection';
 import PropTypes from 'prop-types';
+import AddCollection from './AddCollection';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -30,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CollectionModal({ article, collections, fetchUserCollections }) {
+export default function CollectionModal({ article, collections, fetchUserCollections, createCollection }) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
@@ -58,6 +59,7 @@ export default function CollectionModal({ article, collections, fetchUserCollect
       >
         <div style={modalStyle} className={classes.paper}>
           <SelectCollection article={article} collections={collections} />
+          <AddCollection createCollection={createCollection}/>
         </div>
       </Modal>
     </div>
@@ -67,5 +69,7 @@ export default function CollectionModal({ article, collections, fetchUserCollect
 CollectionModal.propTypes = {
   article: PropTypes.object.isRequired,
   collections: PropTypes.array.isRequired,
-  fetchUserCollections: PropTypes.func.isRequired
+  fetchUserCollections: PropTypes.func.isRequired,
+  createCollection: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };

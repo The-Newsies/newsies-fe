@@ -7,7 +7,7 @@ export default function SelectCollection({ collections, handleSubmit, article })
   const collectionItems = collections.map(collection => {
     return (
       <li key={collection._id}>
-        <div onClick={setSelected(collection._id)}>{collection.name}</div>
+        <div onClick={() => setSelected(collection._id)}>{collection.name}</div>
       </li>);
   });
 

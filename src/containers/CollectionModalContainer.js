@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CollectionModal from '../components/collectionForm/CollectionModal';
 import { fetchCollections } from '../actions/collectionsActions';
 import { getUserCollections } from '../selectors/collectionsSelector';
+import { postCollection } from '../services/collectionsApi';
 
 class CollectionModalContainer extends Component {
   static propTypes = {
@@ -13,13 +14,20 @@ class CollectionModalContainer extends Component {
     })).isRequired,
     handleSubmit: PropTypes.func.isRequired,
     article: PropTypes.object.isRequired,
-    fetchUserCollections: PropTypes.func.isRequired
+    fetchUserCollections: PropTypes.func.isRequired,
+    createCollection: PropTypes.func.isRequired,
   }
 
   render() {
-    const { article, collections, fetchUserCollections } = this.props;
+    const { article, collections, fetchUserCollections, createCollection, handleSubmit } = this.props;
 
-    return <CollectionModal fetchUserCollections={fetchUserCollections} article={article} collections={collections} />;
+    return <CollectionModal 
+      fetchUserCollections={fetchUserCollections} 
+      article={article} 
+      collections={collections} 
+      createCollection={createCollection} 
+      handleSubmit={handleSubmit}
+    />;
   }
 }
 
@@ -30,6 +38,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchUserCollections() {
     dispatch(fetchCollections());
+  },
+  createCollection(name, description) {
+    dispatch(postCollection(name, description));
   }
 });
 
