@@ -13,7 +13,8 @@ $img-url2: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=r
 
 i {
   opacity: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: #fff;
   will-change: transform;
   -webkit-transform: scale(0.1);
@@ -149,7 +150,7 @@ body {
 
     .source a {
       text-decoration: none;
-      color: orangered;
+      color: red;
     }
 
     .social i:nth-of-type(2) {
@@ -179,8 +180,8 @@ body {
 
     .modalButton button {
       position: absolute;
-      right: 14px;
-      bottom: -12px;
+      right: 15px;
+      bottom: -15px;
       width: 30px;
       height: 30px;
       background-color: $blue;
@@ -197,7 +198,7 @@ body {
     }
 
     &:hover button {
-      transform: scale(8.5);
+      transform: scale(5.5);
     }
 
     &:hover p {
@@ -219,7 +220,7 @@ body {
     }
   }
 }
- 
+
 .title {
   display: flex;
   flex: 1;
@@ -232,6 +233,10 @@ body {
 
 footer {
   position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   bottom:20px;
-  padding-left: 10px;
+  font-size: .8rem;
 }
