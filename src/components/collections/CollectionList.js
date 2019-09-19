@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CollectionItem from './CollectionItem';
 
-export default function CollectionList({ collections }) {
+export default function CollectionList({ collections, handleDelete }) {
   const collectionList = collections.map(({
     name,
     description,
@@ -12,6 +12,8 @@ export default function CollectionList({ collections }) {
       <CollectionItem 
         name={name}
         description={description}
+        _id={_id}
+        handleDelete={handleDelete}
       />
     </li>
   ));
@@ -27,6 +29,7 @@ CollectionList.propTypes = {
   collections: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    _id: PropTypes.string.isRequired    
-  })).isRequired
+    _id: PropTypes.string.isRequired,
+  })).isRequired,
+  handleDelete: PropTypes.func.isRequired    
 };

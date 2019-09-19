@@ -7,6 +7,8 @@ describe('CollectionItem component', () => {
     const wrapper = shallow(<CollectionItem 
       name='Title'
       description='description'
+      _id='delete'
+      handleDelete={() => {}}
     />);
     expect(wrapper).toMatchSnapshot();
   });

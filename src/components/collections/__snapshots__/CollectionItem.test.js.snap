@@ -1,12 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CollectionItem component renders CollectionItem 1`] = `
-<div>
+<Link
+  to="/collection/delete"
+>
   <h3>
     Title
   </h3>
   <p>
     description
   </p>
-</div>
+  <button
+    onClick={[Function]}
+  >
+    ✗
+  </button>
+</Link>
 `;

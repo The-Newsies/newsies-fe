@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #FFF;
+  width: 100%;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  font-size: .8rem;
+}
+
+.selectCss {
+  display: block;
+  font-family: sans-serif;
+  color: #444;
+  padding: .2em .2em .2em .2em;
+  width: 6%;
+  max-width: 100%; 
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+}

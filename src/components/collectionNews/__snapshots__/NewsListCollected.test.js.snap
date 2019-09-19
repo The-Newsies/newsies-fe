@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsListCollected component renders NewsListCollected 1`] = `
+<ul
+  className="container"
+>
+  <li
+    key="werwerw"
+  >
+    <NewsItemCollected
+      article={
+        Object {
+          "_id": "werwerw",
+          "description": "description",
+          "publishedAt": "date",
+          "source": Object {
+            "id": "ddgdgd",
+            "name": "name",
+          },
+          "title": "Title",
+          "url": "sourceLink",
+          "urlToImage": "image url",
+        }
+      }
+      deleteArticle={[Function]}
+    />
+  </li>
+</ul>
+`;

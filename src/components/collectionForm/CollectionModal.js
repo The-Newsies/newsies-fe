@@ -60,7 +60,7 @@ export default function CollectionModal({
   return (
     <div>
       <button type="button" onClick={handleOpen}>
-      ➕
+      
       </button>
       <Modal
         aria-labelledby="simple-modal-title"

@@ -3,18 +3,21 @@
 exports[`Tag component renders Tag 1`] = `
 <div>
   <button
-    className="button"
     onClick={[Function]}
-  >
-    <div
-      style={
-        Object {
-          "background": "FFF",
-          "height": "13px",
-          "width": "35px",
-        }
+    style={
+      Object {
+        "alignItems": "center",
+        "background": "white",
+        "border": "none",
+        "display": "flex",
+        "justifyContent": "space-evenly",
+        "lineHeigth": "18px",
+        "padding": "0 5px",
+        "textTransform": "uppercase",
+        "width": "140px",
       }
-    />
+    }
+  >
     <p>
       Science
     </p>

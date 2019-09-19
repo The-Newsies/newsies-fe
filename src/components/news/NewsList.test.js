@@ -9,7 +9,6 @@ describe('NewsList component', () => {
         title: 'Title',
         description: 'description',
         urlToImage: 'image url',
-        author: 'author',
         publishedAt: 'date',
         source: {
           name: 'name',

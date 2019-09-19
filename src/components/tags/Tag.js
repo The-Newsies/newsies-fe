@@ -1,12 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Tag.css';
+import './Tag.css';
 
 export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSelected }) {
   const tagColorStyles = {
     background: color,
-    width: '35px',
-    height: '13px'
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    color: 'white',
+    fontWeight: 'bold',
+    width: '140px',
+    border: 'none',
+    textTransform: 'uppercase',
+    transition: 'color .25s, background .25s, border .25s',
+    padding: '0 5px',
+    lineHeigth: '18px'
+  };
+
+  const menuItem = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    width: '140px',
+    background: 'white',
+    border: 'none',
+    textTransform: 'uppercase',
+    padding: '0 5px',
+    lineHeigth: '18px'
   };
 
   function wrapper() {
@@ -16,8 +37,7 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
 
   return (
     <div>
-      <button className={isSelected ? styles.buttonSelected : styles.button} onClick={wrapper}>
-        <div style={tagColorStyles}></div>
+      <button style={isSelected ? tagColorStyles : menuItem} onClick={wrapper}>
         <p>{name}</p>
       </button>
     </div>
