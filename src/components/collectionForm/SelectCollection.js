@@ -6,9 +6,11 @@ export default function SelectCollection({
   handleSubmit, 
   article, 
   showAddCollection,
-  shown
+  shown,
+  handleClose
 }) {
   const [isSelected, setSelected] = useState('');
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const collectionItems = collections.map(collection => {
     return (
@@ -17,13 +19,27 @@ export default function SelectCollection({
       </li>);
   });
 
+  const saveSubmitWrapper = event => {
+    event.preventDefault(); 
+    if(isSelected !== '') {
+      handleSubmit(article, isSelected);
+      setShowSuccess(true);
+      setTimeout(function() { 
+        handleClose();
+      }, 2000);
+    } else {
+      alert('Please select a collection');
+    }
+  };
+
   return (
     <>
-    <form onSubmit={(event) => { event.preventDefault(); handleSubmit(article, isSelected);}}>
+    <form onSubmit={saveSubmitWrapper}>
       <ul>
         {collectionItems}
       </ul>
       <button>Save</button>
+      {showSuccess ? <p>Successfully saved!</p> : <></>}
     </form>
     { !shown ? <button onClick={showAddCollection}>New Collection</button> : <></> }
     </>
@@ -38,7 +54,8 @@ SelectCollection.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   article: PropTypes.object.isRequired,
   showAddCollection: PropTypes.func.isRequired,
-  shown: PropTypes.bool.isRequired
+  shown: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired
 };
 
 

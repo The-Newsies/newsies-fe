@@ -6,7 +6,7 @@ describe('CollectionList component', () => {
   it('renders CollectionList', () => {
     const wrapper = shallow(<CollectionList 
       collections={[{
-        title: 'Title',
+        name: 'Title',
         description: 'description',
         _id: 'id'
       }]}
