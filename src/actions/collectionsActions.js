@@ -1,4 +1,4 @@
-import { getCollections } from '../services/collectionsApi';
+import { getCollections, deleteCollections } from '../services/collectionsApi';
 
 export const FETCH_COLLECTIONS = 'FETCH_COLLECTIONS';
 export const fetchCollections = () => ({
@@ -6,3 +6,8 @@ export const fetchCollections = () => ({
   payload: getCollections()
 });
 
+export const DELETE_COLLECTIONS = 'DELETE_COLLECTIONS';
+export const deleteCollection = collectionId => ({
+  type: DELETE_COLLECTIONS,
+  payload: deleteCollections(collectionId)
+});
