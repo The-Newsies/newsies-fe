@@ -24,3 +24,7 @@ export const patchArticleToCollection = (articleId, collectionId) => {
     )
   );
 };
+
+export const getAllCollections = () => {
+  return request(`${process.env.API_URL}/collections`);
+};
