@@ -9,7 +9,6 @@ export const getTrending = () => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author, 
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));

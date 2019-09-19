@@ -15,3 +15,15 @@ export const fetchSearchByCategory = (searchTerm, category) => ({
   payload: getSearchByCategory(searchTerm, category),
   pendingType: FETCH_LOADING_TRENDING
 });
+
+export const SET_TRENDING_ARTICLES = 'SET_TRENDING_ARTICLES';
+export const setTrendingArticles = articles => ({
+  type: SET_TRENDING_ARTICLES,
+  payload: articles
+});
+
+export const SET_TRENDING_SORT_BY = 'SET_TRENDING_SORT_BY';
+export const setTrendingSortBy = sortBy => ({
+  type: SET_TRENDING_SORT_BY,
+  payload: sortBy
+});

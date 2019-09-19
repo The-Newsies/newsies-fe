@@ -9,16 +9,11 @@ export default function NewsItemsList({ news }) {
     // sentiment analysis
     const sentiment = new Sentiment();
     const result = sentiment.analyze(article.description || article.title || '');
-    console.log(result);
     const score = result.score;
     return { ...article, sentiment: score };
   });
 
-  const sorted = newsWithSentiment.sort(function(a, b) {
-    return b.sentiment - a.sentiment;
-  });
-
-  const newsList = sorted.map(article => (
+  const newsList = newsWithSentiment.map(article => (
     <li key={article.url}>
       <NewsItem article={article}/>
     </li>

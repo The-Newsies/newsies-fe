@@ -9,6 +9,8 @@ import { setTag } from '../actions/tagsActions';
 import TagsContainer from './TagsContainer';
 import { currentTag } from '../selectors/tagsSelector';
 import Loading from '../components/loading/Loading';
+import SentimentMenuContainer from '../containers/SentimentMenuContainer';
+
 
 class TrendingContainer extends Component {
   static propTypes = {
@@ -29,6 +31,7 @@ class TrendingContainer extends Component {
     if(loading) return <Loading />;
     return (
       <>
+      <SentimentMenuContainer view="trending" />
       <TagsContainer fetchByCategory={fetchByCategory} setSelectedTag={setSelectedTag} selected={selected} />
       <NewsList news={articles} />
       </>
