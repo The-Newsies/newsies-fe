@@ -24,3 +24,4 @@ export const patchArticleToCollection = (articleId, collectionId) => {
     )
   );
 };
+
