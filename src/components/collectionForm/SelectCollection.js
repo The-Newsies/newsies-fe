@@ -39,7 +39,7 @@ export default function SelectCollection({
       <ul>
         {collectionItems}
       </ul>
-      <button>Save</button>
+      {collections.length === 0 ? <p>No collections, add one below!</p> : <button>Save</button>}
       {showSuccess ? <p>Successfully saved!</p> : <></>}
     </form>
     { !shown ? <button onClick={showAddCollection}>New Collection</button> : <></> }
