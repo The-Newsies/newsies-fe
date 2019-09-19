@@ -35,6 +35,12 @@ export const deleteArticleInCollection = (collectionId, articleId) => {
       {
         method: 'PATCH',
         body: JSON.stringify({ articleId })
+      
+export const deleteCollections = (collectionId) => {
+  return (
+    request(`${process.env.API_URL}/collections/${collectionId}`,
+      {
+        method: 'DELETE'
       }
     )
   );

@@ -13,11 +13,3 @@ export const setSearchArticles = articles => ({
   type: SET_SEARCH_ARTICLES,
   payload: articles
 });
-
-export const SET_SEARCH_SORT_BY = 'SET_SEARCH_SORT_BY';
-export const setSearchSortBy = sortBy => ({
-  type: SET_SEARCH_SORT_BY,
-  payload: sortBy
-});
-
-

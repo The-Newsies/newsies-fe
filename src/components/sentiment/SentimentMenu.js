@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Sentiment from 'sentiment';
 
 export default function SentimentMenu({ 
-  // sortBy,
   articles,
-  updateSortBy, 
   updateArticles,
 }) {
   const scored = articles.map(article => {
@@ -53,7 +51,6 @@ export default function SentimentMenu({
     }
 
     updateArticles(updatedArticles);
-    updateSortBy(target.value);
   };
 
   return (
@@ -71,8 +68,6 @@ export default function SentimentMenu({
 }
 
 SentimentMenu.propTypes = {
-  sortBy: PropTypes.string.isRequired,
   articles: PropTypes.array.isRequired,
-  updateSortBy: PropTypes.func.isRequired,
   updateArticles: PropTypes.func.isRequired
 };
