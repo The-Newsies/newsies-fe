@@ -9,7 +9,7 @@ export default function CollectionItem({ name, description, _id, handleDelete })
       <h3>{name}</h3>
       <p>{description}</p>
       <button onClick={() => handleDelete(_id)}>✗</button>
-    </div>
+    </Link>
   );
 }
 

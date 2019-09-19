@@ -2,7 +2,7 @@
 
 exports[`CollectionItem component renders CollectionItem 1`] = `
 <Link
-  to="/collection/_id"
+  to="/collection/delete"
 >
   <h3>
     Title
@@ -15,5 +15,5 @@ exports[`CollectionItem component renders CollectionItem 1`] = `
   >
     ✗
   </button>
-</div>
+</Link>
 `;
