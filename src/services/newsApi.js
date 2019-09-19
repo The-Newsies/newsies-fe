@@ -36,7 +36,8 @@ export const getSearchMultiple = (searchArray) => {
       return res.articles.map(article => ({
         ...article, 
         publishedAt: article.publishedAt.split('T')[0],
-        author: !article.author ? 'unknown' : article.author 
+        author: !article.author ? 'unknown' : article.author,
+        urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
     });
 };
@@ -52,7 +53,8 @@ export const getSearchAll = (searchTerm) => {
       return res.articles.map(article => ({
         ...article, 
         publishedAt: article.publishedAt.split('T')[0],
-        author: !article.author ? 'unknown' : article.author 
+        author: !article.author ? 'unknown' : article.author,
+        urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
     });
 };
@@ -68,7 +70,8 @@ export const getSearchByCategory = (searchTerm, category = '') => {
       return res.articles.map(article => ({
         ...article, 
         publishedAt: article.publishedAt.split('T')[0],
-        author: !article.author ? 'unknown' : article.author 
+        author: !article.author ? 'unknown' : article.author,
+        urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
     });
 };
