@@ -31,11 +31,18 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CollectionModal({ article, collections, fetchUserCollections, createCollection, handleSubmit }) {
+export default function CollectionModal({ 
+  article, 
+  collections, 
+  fetchUserCollections, 
+  createCollection, 
+  handleSubmit,
+}) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
+  const [shown, setShown] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -44,6 +51,10 @@ export default function CollectionModal({ article, collections, fetchUserCollect
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const showAddCollection = () => {
+    !shown ? setShown(true) : setShown(false);
   };
 
   return (
@@ -58,8 +69,14 @@ export default function CollectionModal({ article, collections, fetchUserCollect
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-          <SelectCollection article={article} collections={collections} handleSubmit={handleSubmit} />
-          <AddCollection createCollection={createCollection}/>
+          <SelectCollection 
+            article={article} 
+            collections={collections} 
+            handleSubmit={handleSubmit} 
+            showAddCollection={showAddCollection}
+            shown={shown}
+          />
+          {shown ? <AddCollection createCollection={createCollection}/> : <></>}
         </div>
       </Modal>
     </div>
@@ -71,5 +88,5 @@ CollectionModal.propTypes = {
   collections: PropTypes.array.isRequired,
   fetchUserCollections: PropTypes.func.isRequired,
   createCollection: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
 };
