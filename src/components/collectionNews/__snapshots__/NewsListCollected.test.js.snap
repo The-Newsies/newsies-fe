@@ -5,11 +5,12 @@ exports[`NewsListCollected component renders NewsListCollected 1`] = `
   className="container"
 >
   <li
-    key="ddgdgd"
+    key="werwerw"
   >
     <NewsItemCollected
       article={
         Object {
+          "_id": "werwerw",
           "description": "description",
           "publishedAt": "date",
           "source": Object {
@@ -21,6 +22,7 @@ exports[`NewsListCollected component renders NewsListCollected 1`] = `
           "urlToImage": "image url",
         }
       }
+      deleteArticle={[Function]}
     />
   </li>
 </ul>

@@ -1,5 +1,4 @@
 import request from './request';
-import placeholder from '../assets/newsPlaceholder.jpg';
 
 export const postArticle = article => {
   const {
@@ -28,6 +27,6 @@ export const postArticle = article => {
   });
 };
 
-export const getArticlesByCollectionId = _id => {
-  return request(`${process.env.API_URL}/articles/by-collection/${_id}`)
+export const getArticlesByCollectionId = collectionId => {
+  return request(`${process.env.API_URL}/articles/by-collection/${collectionId}`);
 };
