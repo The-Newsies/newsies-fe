@@ -4,6 +4,10 @@ body {
   margin-top: 120px;
 }
 
+button {
+  outline: none;
+}
+
 /* p {
   color: orange;
 } */
