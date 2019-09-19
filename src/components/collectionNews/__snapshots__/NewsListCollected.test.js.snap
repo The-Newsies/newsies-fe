@@ -5,7 +5,7 @@ exports[`NewsListCollected component renders NewsListCollected 1`] = `
   className="container"
 >
   <li
-    key="sourceLink"
+    key="ddgdgd"
   >
     <NewsItemCollected
       article={

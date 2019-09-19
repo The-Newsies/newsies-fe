@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CollectionDetailTitle from '../components/collectionDetailTitle/CollectionDetailTitle';
 import { getCollectionById } from '../services/collectionsApi';
-// import { getArticleById } from '../services/articlesApi';
+import { getArticlesByCollectionId } from '../services/articlesApi';
+import NewsListCollected from '../components/collectionNews/NewsListCollected';
 
 export default class CollectionDetailView extends Component {
   static propTypes = {
@@ -12,7 +13,7 @@ export default class CollectionDetailView extends Component {
   state = {
     name: '',
     description: '',
-    articleIds: []
+    news: []
   }
 
   fetchCollection = () => {
@@ -21,26 +22,31 @@ export default class CollectionDetailView extends Component {
         this.setState({
           name: res.name,
           description: res.description,
-          articleIds: res.articleIds
         });
       });
   }
 
-  // fetchArticles = () => {
-  //   this.state.articleIds.forEach((_, i) => {
-  //     return getArticleById(i);
-  //   });
-  // }
+  fetchArticlesInCollection = () => {
+    getArticlesByCollectionId(this.props.match.params._id)
+      .then(res => {
+        this.setState({
+          news: res
+        });
+      });
+  }
 
   componentDidMount() {
     this.fetchCollection();
-    // this.fetchArticles();
+    this.fetchArticlesInCollection();
   }
 
   render() {
-    const { name, description } = this.state;
+    const { name, description, news } = this.state;
     return (
-      <CollectionDetailTitle name={name} description={description} />
+      <>
+        <CollectionDetailTitle name={name} description={description} />
+        <NewsListCollected news={news} />
+      </>
     );
   }
 }

@@ -1,6 +1,7 @@
 import request from './request';
+import placeholder from '../assets/newsPlaceholder.jpg';
 
-export const postArticle = (article) => {
+export const postArticle = article => {
   const {
     source,
     author,
@@ -11,25 +12,22 @@ export const postArticle = (article) => {
     publishedAt,
     content
   } = article;
-  
-  return (
-    request(`${process.env.API_URL}/articles`,
-      {
-        method: 'POST',
-        body: JSON.stringify({ 
-          source,
-          author,
-          title,
-          description,
-          url,
-          urlToImage,
-          publishedAt,
-          content
-        }),
-      })
-  );
+
+  return request(`${process.env.API_URL}/articles`, {
+    method: 'POST',
+    body: JSON.stringify({
+      source,
+      author,
+      title,
+      description,
+      url,
+      urlToImage,
+      publishedAt,
+      content
+    })
+  });
 };
 
-export const getArticleById = (articleId) => {
-  return request(`${process.env.API_URL}/articles/${articleId}`);
+export const getArticlesByCollectionId = _id => {
+  return request(`${process.env.API_URL}/articles/by-collection/${_id}`)
 };
