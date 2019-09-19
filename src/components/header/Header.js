@@ -21,5 +21,5 @@ export default function Header({ location }) {
 }
 
 Header.propTypes = {
-  location: PropTypes.object.isRequired
+  location: PropTypes.object
 };
