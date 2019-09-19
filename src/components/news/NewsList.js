@@ -18,25 +18,9 @@ export default function NewsItemsList({ news }) {
     return b.sentiment - a.sentiment;
   });
 
-  const newsList = sorted.map(({
-    title,
-    description,
-    urlToImage,
-    author,
-    publishedAt,
-    source,
-    url
-  }) => (
-    <li key={url}>
-      <NewsItem 
-        title={title || 'No title'}
-        description={description || 'No description'}
-        urlToImage={urlToImage}
-        author={author}
-        publishedAt={publishedAt}
-        source={source}
-        url={url}
-      />
+  const newsList = sorted.map(article => (
+    <li key={article.url}>
+      <NewsItem article={article}/>
     </li>
   ));
 

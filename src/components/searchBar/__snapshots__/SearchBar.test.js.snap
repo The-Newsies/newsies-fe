@@ -4,14 +4,15 @@ exports[`SearchBar component renders SearchBar 1`] = `
 <div>
   <input
     onChange={[Function]}
-    placeholder="search"
+    placeholder="search all news"
     type="text"
     value=""
   />
   <button
+    className="searchButton"
     onClick={[Function]}
   >
-    Search!
+    Search
   </button>
 </div>
 `;

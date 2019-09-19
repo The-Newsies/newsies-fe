@@ -8,6 +8,7 @@ import { fetchSearchByCategory } from '../actions/trendingActions';
 import { setTag } from '../actions/tagsActions';
 import TagsContainer from './TagsContainer';
 import { currentTag } from '../selectors/tagsSelector';
+import Loading from '../components/loading/Loading';
 
 class TrendingContainer extends Component {
   static propTypes = {
@@ -25,7 +26,7 @@ class TrendingContainer extends Component {
 
   render() {
     const { articles, loading, fetchByCategory, setSelectedTag, selected } = this.props;
-    if(loading) return <h1>LOADING</h1>;
+    if(loading) return <Loading />;
     return (
       <>
       <TagsContainer fetchByCategory={fetchByCategory} setSelectedTag={setSelectedTag} selected={selected} />

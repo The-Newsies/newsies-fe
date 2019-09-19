@@ -7,9 +7,31 @@
   color: black;
   cursor: pointer;
   font-size: .8rem;
-  margin-left: 8rem;
+  margin-left: .3rem;
 }
 
 .signIn:hover {
   color: red;
+}
+
+.trendingSignin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.trending {
+  color: black;
+  font-size: .8rem;
+  text-decoration: none;
+  margin-right: .3rem;
+}
+
+.trending:hover {
+  color: red;
+}
+
+.divider {
+  font-size: 1rem;
+  color: black;
 }
