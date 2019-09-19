@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { setSearchArticles, setSearchSortBy } from '../actions/searchActions';
 import { setTrendingArticles, setTrendingSortBy } from '../actions/trendingActions';
-import SentimentMenu from '../components/sentiment/sentimentMenu';
+import SentimentMenu from '../components/sentiment/SentimentMenu';
 import { getTrendingSortBy, getTrending } from '../selectors/trendingSelector';
 import { getSearchSortBy, getSearchResults } from '../selectors/searchSelector';
 
