@@ -1,4 +1,5 @@
 import placeholder from '../assets/newsPlaceholder.jpg';
+
 // top headlines
 export const getTrending = () => {
   return fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=${process.env.NEWS_API_KEY}`)

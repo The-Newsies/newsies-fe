@@ -6,6 +6,7 @@ import { withSession } from '../Auth0Provider';
 import './App.css';
 import Search from '../pages/Search';
 import Trending from '../pages/Trending';
+import CollectionDetail from '../pages/CollectionDetail';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path='/myNews' component={withSession(MyNews)} />
           <Route path='/trending' component={withSession(Trending)} />
           <Route path='/search' component={withSession(Search)} />
+          <Route path='/collection/:_id' component={withSession(CollectionDetail)} />
         </Switch>
       </Router>
     </>
