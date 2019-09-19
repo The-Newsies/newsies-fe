@@ -8,5 +8,10 @@ exports[`CollectionItem component renders CollectionItem 1`] = `
   <p>
     description
   </p>
+  <button
+    onClick={[Function]}
+  >
+    ✗
+  </button>
 </div>
 `;

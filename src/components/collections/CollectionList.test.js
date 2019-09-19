@@ -8,8 +8,9 @@ describe('CollectionList component', () => {
       collections={[{
         name: 'Title',
         description: 'description',
-        _id: 'id'
+        _id: 'id',
       }]}
+      handleDelete={() => {}}
     />);
     expect(wrapper).toMatchSnapshot();
   });

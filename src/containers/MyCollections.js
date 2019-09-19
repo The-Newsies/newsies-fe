@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CollectionList from '../components/collections/CollectionList';
-import { fetchCollections } from '../actions/collectionsActions';
+import { fetchCollections, deleteCollection } from '../actions/collectionsActions';
 import { getUserCollections } from '../selectors/collectionsSelector';
 
 
@@ -11,9 +11,9 @@ class MyCollections extends Component {
     collections: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired,
-      handleDelete: PropTypes.func.isRequired    
+      _id: PropTypes.string.isRequired
     })).isRequired,
+    handleDelete: PropTypes.func.isRequired,    
     fetch: PropTypes.func.isRequired
   }
 
@@ -22,9 +22,9 @@ class MyCollections extends Component {
   }
 
   render() {
-    const { collections } = this.props;
+    const { collections, handleDelete } = this.props;
     return (
-      <CollectionList collections={collections} />
+      <CollectionList collections={collections} handleDelete={handleDelete}/>
     );
   }
 }
@@ -35,6 +35,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetch() {
+    dispatch(fetchCollections());
+  },
+  handleDelete(collection_id) {
+    dispatch(deleteCollection(collection_id));
     dispatch(fetchCollections());
   }
 });

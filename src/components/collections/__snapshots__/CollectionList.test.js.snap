@@ -6,7 +6,9 @@ exports[`CollectionList component renders CollectionList 1`] = `
     key="id"
   >
     <CollectionItem
+      _id="id"
       description="description"
+      handleDelete={[Function]}
       name="Title"
     />
   </li>
