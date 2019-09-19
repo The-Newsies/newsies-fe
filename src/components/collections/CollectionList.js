@@ -4,14 +4,15 @@ import CollectionItem from './CollectionItem';
 
 export default function CollectionList({ collections }) {
   const collectionList = collections.map(({
-    title,
+    name,
     description,
     _id
   }) => (
     <li key={_id}>
       <CollectionItem 
-        title={title}
+        name={name}
         description={description}
+        _id={_id}
       />
     </li>
   ));
@@ -25,7 +26,7 @@ export default function CollectionList({ collections }) {
 
 CollectionList.propTypes = {
   collections: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     _id: PropTypes.string.isRequired    
   })).isRequired

@@ -6,8 +6,9 @@ exports[`CollectionList component renders CollectionList 1`] = `
     key="id"
   >
     <CollectionItem
+      _id="id"
       description="description"
-      title="Title"
+      name="Title"
     />
   </li>
 </ul>

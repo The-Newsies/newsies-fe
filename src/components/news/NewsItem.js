@@ -2,16 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewsItemB.css';
 import { useAuth0 } from '../../Auth0Provider';
+import Sentiment from 'sentiment';
 import CollectionModalContainer from '../../containers/CollectionModalContainer';
 
 export default function NewsItem({ article }) {
   const { isAuthenticated } = useAuth0();
 
+  // sentiment analysis
+  const sentiment = new Sentiment();
+  const result = sentiment.analyze(article.description || article.title || '');
+  const score = result.score;
+  const sentimentAbsolute = result.calculation.reduce((acc, i) => {
+    acc = acc + Math.abs(Object.values(i)[0]);
+    return acc;
+  }, 0);
+
   const { 
     title, 
     description, 
     publishedAt, 
-    // author, 
     url, 
     source, 
     urlToImage } = article;
@@ -31,10 +40,12 @@ export default function NewsItem({ article }) {
         <div className={styles.content}>
           <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{description}</p>
-          <footer>Published: {publishedAt}</footer>
+          <footer>
+            Published: {publishedAt}
+            <p>Sentiment Score: {score}</p>
+            <p>How Emotional?: {sentimentAbsolute}</p>
+          </footer>
         </div>
-       
-
       </div>
     </div>
   );
@@ -43,9 +54,8 @@ export default function NewsItem({ article }) {
 NewsItem.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     urlToImage: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
     publishedAt: PropTypes.string.isRequired,
     source: PropTypes.shape({ 
       name: PropTypes.string,

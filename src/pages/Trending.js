@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import TrendingContainer from '../containers/TrendingContainer';
 import PageTitle from '../components/pageTitle/PageTitle';
 
-
 export default function Trending({ location }) {
   return (
     <>

@@ -3,7 +3,9 @@ import {
   FETCH_TRENDING,
   fetchSearchByCategory,
   FETCH_SEARCH_BY_CATEGORY,
-  FETCH_LOADING_TRENDING
+  FETCH_LOADING_TRENDING,
+  setTrendingArticles,
+  SET_TRENDING_ARTICLES
 } from './trendingActions';
 
 jest.mock('../services/newsApi.js', () => ({
@@ -29,6 +31,15 @@ describe('trendingActions tests', () => {
       type: FETCH_SEARCH_BY_CATEGORY,
       payload: Promise,
       pendingType: FETCH_LOADING_TRENDING
+    });
+  });
+
+  it('updates trending articles', () => {
+    const actionCreator = setTrendingArticles([{}]);
+
+    expect(actionCreator).toEqual({ 
+      type: SET_TRENDING_ARTICLES, 
+      payload: [{}],
     });
   });
 });

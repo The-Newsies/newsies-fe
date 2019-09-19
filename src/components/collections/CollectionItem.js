@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
-export default function CollectionItem({ title, description }) {
+export default function CollectionItem({ name, description, _id }) {
   return (
-    <div>
-      <h3>{title}</h3>
+    <Link to={`/collection/${_id}`}>
+      <h3>{name}</h3>
       <p>{description}</p>
-    </div>
+    </Link>
   );
 }
 
 CollectionItem.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  _id: PropTypes.string
+  _id: PropTypes.string.isRequired
 };

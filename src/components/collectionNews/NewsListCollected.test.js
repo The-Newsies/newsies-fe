@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import NewsList from './NewsList';
+import NewsListCollected from './NewsListCollected';
 
-describe('NewsList component', () => {
-  it('renders NewsList', () => {
-    const wrapper = shallow(<NewsList 
+describe('NewsListCollected component', () => {
+  it('renders NewsListCollected', () => {
+    const wrapper = shallow(<NewsListCollected 
       news={[{
         title: 'Title',
         description: 'description',

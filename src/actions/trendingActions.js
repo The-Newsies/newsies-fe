@@ -15,3 +15,9 @@ export const fetchSearchByCategory = (searchTerm, category) => ({
   payload: getSearchByCategory(searchTerm, category),
   pendingType: FETCH_LOADING_TRENDING
 });
+
+export const SET_TRENDING_ARTICLES = 'SET_TRENDING_ARTICLES';
+export const setTrendingArticles = articles => ({
+  type: SET_TRENDING_ARTICLES,
+  payload: articles
+});

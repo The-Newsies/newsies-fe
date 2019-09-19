@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewsList component renders NewsList 1`] = `
+exports[`NewsListCollected component renders NewsListCollected 1`] = `
 <ul
   className="container"
 >
   <li
-    key="sourceLink"
+    key="ddgdgd"
   >
-    <NewsItem
+    <NewsItemCollected
       article={
         Object {
           "description": "description",
           "publishedAt": "date",
-          "sentiment": 0,
           "source": Object {
             "id": "ddgdgd",
             "name": "name",

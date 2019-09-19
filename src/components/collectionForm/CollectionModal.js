@@ -76,6 +76,7 @@ export default function CollectionModal({
             handleSubmit={handleSubmit} 
             showAddCollection={showAddCollection}
             shown={shown}
+            handleClose={handleClose}
           />
           {shown ? <AddCollection createCollection={createCollection}/> : <></>}
         </div>
