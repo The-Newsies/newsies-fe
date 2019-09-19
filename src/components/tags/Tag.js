@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Tag.css';
 
 export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSelected }) {
   const tagColorStyles = {
@@ -9,7 +10,7 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
     justifyContent: 'space-evenly',
     color: 'white',
     fontWeight: 'bold',
-    width: '175px',
+    width: '140px',
     border: 'none',
     textTransform: 'uppercase',
     transition: 'color .25s, background .25s, border .25s',
@@ -17,11 +18,11 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
     lineHeigth: '18px'
   };
 
-  const button = {
+  const menuItem = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    width: '175px',
+    width: '140px',
     background: 'white',
     border: 'none',
     textTransform: 'uppercase',
@@ -36,7 +37,7 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
 
   return (
     <div>
-      <button style={isSelected ? tagColorStyles : button} onClick={wrapper}>
+      <button style={isSelected ? tagColorStyles : menuItem} onClick={wrapper}>
         <p>{name}</p>
       </button>
     </div>

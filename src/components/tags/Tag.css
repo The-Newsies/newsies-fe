@@ -1,14 +1,13 @@
-.button {
+button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 175px;
+  width: 10px;
   background: white;
-  border: rgb(160, 160, 160) 1px solid;
 }
 
-.button:hover {
-  background: rgb(165, 165, 165);
+button:hover {
+  cursor: pointer;
 }
 
 .buttonSelected {

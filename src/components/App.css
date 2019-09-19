@@ -17,6 +17,11 @@ h1 {
   text-transform: uppercase;
 }
 
+*:focus {
+  outline: none;
+}
+
+
 /* p {
   color: orange;
 } */

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Sentiment from 'sentiment';
+import styles from './SentimentMenu.css';
 
 export default function SentimentMenu({ 
   articles,
@@ -54,16 +55,16 @@ export default function SentimentMenu({
   };
 
   return (
-    <section>
-      <p>Sort By:</p>
-      <select onChange={handleChange}>
+    <div className={styles.menu}>
+      <select onChange={handleChange} className={styles.selectCss}>
+        <option>SORT BY:</option>
         <option value="date">Date</option>
         <option value="positive">Positive</option>
         <option value="negative">Negative</option>
         <option value="neutral">Neutral</option>
         <option value="emotional">Emotional</option>
       </select>
-    </section>
+    </div>
   );
 }
 
