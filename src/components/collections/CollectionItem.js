@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 
 export default function CollectionItem({ name, description, _id, handleDelete }) {
   return (
+    <>
     <Link to={`/collection/${_id}`}>
       <h3>{name}</h3>
       <p>{description}</p>
-      <button onClick={() => handleDelete(_id)}>✗</button>
     </Link>
+      <button onClick={() => handleDelete(_id)}>✗</button>
+    </>
   );
 }
 

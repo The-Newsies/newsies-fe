@@ -6,7 +6,7 @@ export default function result(state = [], action) {
       return action.payload;
     case DELETE_COLLECTIONS: 
       return state.filter(collection => {
-        return action.payload[0]._id !== collection._id;
+        return action.payload._id !== collection._id;
       });
     default:
       return state;
