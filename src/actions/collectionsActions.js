@@ -7,7 +7,7 @@ export const fetchCollections = () => ({
 });
 
 export const DELETE_COLLECTIONS = 'DELETE_COLLECTIONS';
-export const deleteCollection = () => ({
+export const deleteCollection = collectionId => ({
   type: DELETE_COLLECTIONS,
-  payload: deleteCollections()
+  payload: deleteCollections(collectionId)
 });
