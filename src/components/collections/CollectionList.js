@@ -6,12 +6,14 @@ export default function CollectionList({ collections }) {
   const collectionList = collections.map(({
     name,
     description,
-    _id
+    _id,
+    handleDelete
   }) => (
     <li key={_id}>
       <CollectionItem 
         name={name}
         description={description}
+        handleDelete={handleDelete}
       />
     </li>
   ));
@@ -27,6 +29,7 @@ CollectionList.propTypes = {
   collections: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    _id: PropTypes.string.isRequired    
+    _id: PropTypes.string.isRequired,
+    handleDelete: PropTypes.func.isRequired    
   })).isRequired
 };

@@ -11,7 +11,8 @@ class MyCollections extends Component {
     collections: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      _id: PropTypes.string.isRequired    
+      _id: PropTypes.string.isRequired,
+      handleDelete: PropTypes.func.isRequired    
     })).isRequired,
     fetch: PropTypes.func.isRequired
   }
