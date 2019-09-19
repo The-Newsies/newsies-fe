@@ -51,7 +51,7 @@ export default function NewsItem({ article }) {
 NewsItem.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     urlToImage: PropTypes.string.isRequired,
     publishedAt: PropTypes.string.isRequired,
     source: PropTypes.shape({ 

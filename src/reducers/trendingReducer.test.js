@@ -2,7 +2,8 @@ import trendingReducer from './trendingReducer';
 
 import {
   fetchTrending,
-  fetchSearchByCategory
+  fetchSearchByCategory,
+  setTrendingArticles
 } from '../actions/trendingActions';
 
 jest.mock('../services/newsApi.js', () => ({
@@ -76,6 +77,7 @@ describe('trendingReducer', () => {
       loading: false
     });
   });
+
   it('returns searchByCategory state and updates state', () => {
     const state = {
       articles: [],
@@ -99,6 +101,21 @@ describe('trendingReducer', () => {
         publishedAt: '2019-09-15T20:08:00Z',
         content: 'A Texas mom of three says that her vaping habit was to blame for a mysterious lung illness that left her in a coma.\r\nSherie Canada of Abilene took to social media after a 24-day hospital stint to warn others that e-cigarettes “nearly killed” her.\r\n“You have n… [+1636 chars]'
       }],
+      loading: false
+    });
+  });
+
+  it('updates articles and state', () => {
+    const state = {
+      articles: [],
+      loading: false
+    };
+
+    const action = setTrendingArticles([{ hi: 'mmmmmm' }]);
+
+    const newState = trendingReducer(state, action);
+    expect(newState).toEqual({
+      articles: [{ hi: 'mmmmmm' }],
       loading: false
     });
   });

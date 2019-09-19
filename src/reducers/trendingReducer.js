@@ -1,14 +1,12 @@
 import { FETCH_TRENDING, 
   FETCH_LOADING_TRENDING,
   FETCH_SEARCH_BY_CATEGORY,
-  SET_TRENDING_ARTICLES,
-  SET_TRENDING_SORT_BY
+  SET_TRENDING_ARTICLES
 } from '../actions/trendingActions';
 
 const initialState = {
   articles: [],
-  loading: false,
-  sortBy: 'date'
+  loading: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -21,8 +19,6 @@ export default function reducer(state = initialState, action) {
       return { ...state, loading: true };
     case SET_TRENDING_ARTICLES:
       return { ...state, articles: action.payload };
-    case SET_TRENDING_SORT_BY:
-      return { ...state, sortBy: action.payload };
     default:
       return state;
   }
