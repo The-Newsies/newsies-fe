@@ -35,12 +35,13 @@ export default function DropDownMenu() {
         <MenuItem onClick={handleClose}><NavLink to='/trending' className={styles.link} activeStyle={{ 
           fontWeight: 'bold',
           color: 'red' }}>Trending</NavLink></MenuItem>
-        <MenuItem onClick={handleClose}><NavLink to='/search' className={styles.link} activeStyle={{ 
-          fontWeight: 'bold', 
-          color: 'red' }}>Search</NavLink></MenuItem>
         <MenuItem onClick={handleClose}><NavLink to='/myNews' className={styles.link} activeStyle={{ 
           fontWeight: 'bold', 
           color: 'red' }}>My News</NavLink></MenuItem>
+        <MenuItem onClick={handleClose}><NavLink to='/search' className={styles.link} activeStyle={{ 
+          fontWeight: 'bold', 
+          color: 'red' }}>Search</NavLink></MenuItem>
+       
         <MenuItem onClick={handleClose}><span onClick={logout}>Sign-out</span></MenuItem>
       </Menu>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './NewsItem.css';
+import styles from './NewsItemB.css';
 import { useAuth0 } from '../../Auth0Provider';
 import Sentiment from 'sentiment';
 import CollectionModalContainer from '../../containers/CollectionModalContainer';
@@ -27,22 +27,25 @@ export default function NewsItem({ article }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.linkContainer}>
-        <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
-        {isAuthenticated ?  <CollectionModalContainer article={article} /> : <></>}
-      </div>
-      <div className={styles.imageContainer}>
-        <img src={urlToImage} />
-      </div>
-      <div className={styles.titleContainer}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
-        <footer className={styles.source}>
-          <p>Published: {publishedAt.split('T')[0]}</p>
-          {/* <p>Author: {author}</p> */}
-          <p>Sentiment Score: {score}</p>
-          <p>How Emotional?: {sentimentAbsolute}</p>
-        </footer>
+      <div className={styles.card}>
+        <div className={styles.image}>
+          <img src={urlToImage} />
+        </div>
+        <div className={styles.modalButton}>
+          {isAuthenticated ?  <CollectionModalContainer article={article} /> : <></>}
+        </div>
+        <div className={styles.source}>
+          <i><a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a></i>
+        </div>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.description}>{description}</p>
+          <footer>
+            Published: {publishedAt}
+            <p>Sentiment Score: {score}</p>
+            <p>How Emotional?: {sentimentAbsolute}</p>
+          </footer>
+        </div>
       </div>
     </div>
   );
@@ -61,3 +64,4 @@ NewsItem.propTypes = {
     url: PropTypes.string.isRequired,
   })
 };
+

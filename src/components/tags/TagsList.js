@@ -13,11 +13,11 @@ export default function TagsList({ fetchByCategory, tags, setSelectedTag, select
   ));
 
   return (
-    <section className={style.TagsList}>
+    <div className={style.TagsList}>
       <ul>
         {tagArray}
       </ul>
-    </section>
+    </div>
   );
 }
 
