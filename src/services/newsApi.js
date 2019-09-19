@@ -1,7 +1,8 @@
 import placeholder from '../assets/newsPlaceholder.jpg';
+
 // top headlines
 export const getTrending = () => {
-  return fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWS_API_KEY}`)
+  return fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=100&apiKey=${process.env.NEWS_API_KEY}`)
     .then(res => {
       if(!res.ok) throw 'unable to fetch trending';
       return res.json();
@@ -9,7 +10,6 @@ export const getTrending = () => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author, 
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
@@ -35,7 +35,6 @@ export const getSearchMultiple = (searchArray) => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author,
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
@@ -44,7 +43,7 @@ export const getSearchMultiple = (searchArray) => {
 
 // everything
 export const getSearchAll = (searchTerm) => {
-  return fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${process.env.NEWS_API_KEY}`)
+  return fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&pageSize=100&apiKey=${process.env.NEWS_API_KEY}`)
     .then(res => {
       if(!res.ok) throw 'unable to fetch searchAll';
       return res.json();
@@ -52,7 +51,6 @@ export const getSearchAll = (searchTerm) => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author,
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
@@ -61,7 +59,7 @@ export const getSearchAll = (searchTerm) => {
 
 // top headlines
 export const getSearchByCategory = (searchTerm, category = '') => {
-  return fetch(`https://newsapi.org/v2/top-headlines?country=us&q=${searchTerm}&category=${category}&apiKey=${process.env.NEWS_API_KEY}`)
+  return fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=100&q=${searchTerm}&category=${category}&apiKey=${process.env.NEWS_API_KEY}`)
     .then(res => {
       if(!res.ok) throw 'unable to fetch trending by search';
       return res.json();
@@ -69,7 +67,6 @@ export const getSearchByCategory = (searchTerm, category = '') => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author,
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));

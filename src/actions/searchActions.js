@@ -8,4 +8,8 @@ export const fetchSearchAll = (searchTerm) => ({
   pendingType: FETCH_LOADING_SEARCH
 });
 
-
+export const SET_SEARCH_ARTICLES = 'SET_SEARCH_ARTICLES';
+export const setSearchArticles = articles => ({
+  type: SET_SEARCH_ARTICLES,
+  payload: articles
+});
