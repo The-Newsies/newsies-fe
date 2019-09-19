@@ -5,7 +5,7 @@ import NewsItemCollected from './NewsItemCollected';
 
 export default function NewsListCollected({ news, deleteArticle }) {
   const newsList = news.map(article => (
-    <li key={article.source.id}>
+    <li key={article._id}>
       <NewsItemCollected deleteArticle={deleteArticle} article={article}/>
     </li>
   ));
