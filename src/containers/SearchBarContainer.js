@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 class SearchBarContainer extends Component {
   static propTypes = {
     handleClick: PropTypes.func.isRequired,
-    handleTrending: PropTypes.func.isRequired
   }
 
   render() {
