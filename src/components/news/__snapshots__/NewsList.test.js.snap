@@ -12,6 +12,7 @@ exports[`NewsList component renders NewsList 1`] = `
         Object {
           "description": "description",
           "publishedAt": "date",
+          "sentiment": 0,
           "source": Object {
             "id": "ddgdgd",
             "name": "name",
