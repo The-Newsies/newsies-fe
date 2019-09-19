@@ -13,7 +13,7 @@ $img-url2: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=r
 
 i {
   opacity: 0;
-  font-size: 18px;
+  font-size: 1.2rem;
   color: #fff;
   will-change: transform;
   -webkit-transform: scale(0.1);
@@ -50,7 +50,7 @@ body {
 
     &:before {
       content: "";
-      z-index: 1;
+      z-index: 99;
       position: absolute;
       top: -10px;
       left: 32px;
@@ -62,7 +62,7 @@ body {
     }
     &:after {
       content: "";
-      z-index: 1;
+      z-index: 99;
       position: absolute;
       bottom: -10px;
       left: 32px;
@@ -95,15 +95,6 @@ body {
       text-align: center;
       color: #000;
     }
-
-    .fa-arrow-right {
-      z-index: 100;
-      position: absolute;
-      right: 75px;
-      bottom: 25px;
-      font-size: 40px;
-      cursor: pointer;
-    }
     p {
       z-index: 0;
       top: 40px;
@@ -120,13 +111,12 @@ body {
     .image {
       z-index: 100;
       display: flex;
-      flex-direction: row;
       overflow: hidden;
-      justify-content: center;
       width: 100%;
       height: 260px;
-      filter: grayscale(100%);
       background-size: cover;
+      justify-content: center;
+      filter: grayscale(100%);
     }
 
     .image img {
@@ -188,7 +178,6 @@ body {
     }
 
     .modalButton button {
-      z-index: 100;
       position: absolute;
       right: 14px;
       bottom: -12px;
