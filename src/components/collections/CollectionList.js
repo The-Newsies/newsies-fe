@@ -12,6 +12,7 @@ export default function CollectionList({ collections }) {
       <CollectionItem 
         name={name}
         description={description}
+        _id={_id}
       />
     </li>
   ));
