@@ -54,7 +54,6 @@ export default function SentimentMenu({
         updatedArticles = scored;
         break;
     }
-    console.log(updateArticles);
 
     updateArticles(updatedArticles);
     updateSortBy(target.value);
@@ -63,12 +62,12 @@ export default function SentimentMenu({
   return (
     <section>
       <p>Sort By:</p>
-      <select onChange={handleChange} selected={sortBy}>
-        <option value="date">Date</option>
-        <option value="positive">Positive</option>
-        <option value="negative">Negative</option>
-        <option value="neutral">Neutral</option>
-        <option value="emotional">Emotional</option>
+      <select onChange={handleChange}>
+        <option selected={sortBy === 'date' ? true : false} value="date">Date</option>
+        <option selected={sortBy === 'positive' ? true : false} value="positive">Positive</option>
+        <option selected={sortBy === 'negative' ? true : false} value="negative">Negative</option>
+        <option selected={sortBy === 'neutral' ? true : false} value="neutral">Neutral</option>
+        <option selected={sortBy === 'emotional' ? true : false} value="emotional">Emotional</option>
       </select>
     </section>
   );
