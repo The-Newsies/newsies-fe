@@ -5,7 +5,6 @@ import CollectionList from '../components/collections/CollectionList';
 import { fetchCollections, deleteCollection } from '../actions/collectionsActions';
 import { getUserCollections } from '../selectors/collectionsSelector';
 
-
 class MyCollections extends Component {
   static propTypes = {
     collections: PropTypes.arrayOf(PropTypes.shape({
@@ -22,9 +21,9 @@ class MyCollections extends Component {
   }
 
   render() {
-    const { collections, handleDelete } = this.props;
+    const { collections, handleDelete, fetch } = this.props;
     return (
-      <CollectionList collections={collections} handleDelete={handleDelete}/>
+      <CollectionList collections={collections} handleDelete={handleDelete} fetch={fetch}/>
     );
   }
 }
@@ -38,8 +37,8 @@ const mapDispatchToProps = dispatch => ({
     dispatch(fetchCollections());
   },
   handleDelete(collection_id) {
+    console.log('handle delete');
     dispatch(deleteCollection(collection_id));
-    dispatch(fetchCollections());
   }
 });
 

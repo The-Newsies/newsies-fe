@@ -9,12 +9,12 @@ jest.mock('../services/collectionsApi.js', () => ({
     articleIds: []
   }]),
 
-  deleteCollections: () => ([{
-    _id: '456',
-    name: 'npr.com',
-    description: 'to be deleted',
+  deleteCollections: () => ({
+    _id: '123',
+    name: 'Nypost.com',
+    description: 'today is thurs',
     articleIds: []
-  }])
+  })
 }));
 
 describe('collectionsReducer', () => {
@@ -63,9 +63,9 @@ describe('collectionsReducer', () => {
 
     const newState = collectionsReducer(state, action);
     expect(newState).toEqual([{
-      _id: '123',
-      name: 'Nypost.com',
-      description: 'today is thurs',
+      _id: '456',
+      name: 'npr.com',
+      description: 'to be deleted',
       articleIds: []
     }]);
   });
