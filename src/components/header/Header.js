@@ -15,7 +15,6 @@ export default function Header({ location }) {
       <img className={styles.logo} src={logo} />
       {!isAuthenticated ? <LandingWrapper /> : <MyViewWrapper location={location} />}
     </div>
-    <hr className={styles.line} />
     </>
   );
 }
