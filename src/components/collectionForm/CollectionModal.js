@@ -69,6 +69,7 @@ export default function CollectionModal({
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
+          <button onClick={handleClose}>X</button>
           <SelectCollection 
             article={article} 
             collections={collections} 
