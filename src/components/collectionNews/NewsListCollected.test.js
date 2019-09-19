@@ -14,8 +14,10 @@ describe('NewsListCollected component', () => {
           name: 'name',
           id: 'ddgdgd'
         },
-        url: 'sourceLink'
+        url: 'sourceLink',
+        _id: 'werwerw'
       }]}
+      deleteArticle={() => {}}
     />);
     expect(wrapper).toMatchSnapshot();
   });

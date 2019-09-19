@@ -31,7 +31,6 @@ NewsItemsList.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     urlToImage: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
     publishedAt: PropTypes.string.isRequired,
     source: PropTypes.shape({ 
       name: PropTypes.string.isRequired,
