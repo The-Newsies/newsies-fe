@@ -5,7 +5,7 @@ import CollectionItem from './CollectionItem';
 describe('CollectionItem component', () => {
   it('renders CollectionItem', () => {
     const wrapper = shallow(<CollectionItem 
-      title='Title'
+      name='Title'
       description='description'
     />);
     expect(wrapper).toMatchSnapshot();
