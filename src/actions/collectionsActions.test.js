@@ -1,10 +1,13 @@
 import {
   FETCH_COLLECTIONS,
-  fetchCollections
+  fetchCollections,
+  deleteArticle,
+  DELETE_ARTICLE
 } from './collectionsActions';
 
 jest.mock('../services/collectionsApi.js', () => ({
-  getCollections: () => Promise
+  getCollections: () => Promise,
+  deleteArticleInCollection: () => Promise
 }));
 
 describe('collections actions', () => {
@@ -13,6 +16,15 @@ describe('collections actions', () => {
 
     expect(actionCreator).toEqual({
       type: FETCH_COLLECTIONS,
+      payload: Promise
+    });
+  });
+
+  it('dispatches a delete fetch to remove an article from a collection', () => {
+    const actionCreator = deleteArticle();
+
+    expect(actionCreator).toEqual({
+      type: DELETE_ARTICLE,
       payload: Promise
     });
   });
