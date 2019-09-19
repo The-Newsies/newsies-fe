@@ -8,18 +8,20 @@ exports[`NewsList component renders NewsList 1`] = `
     key="sourceLink"
   >
     <NewsItem
-      author="author"
-      description="description"
-      publishedAt="date"
-      source={
+      article={
         Object {
-          "id": "ddgdgd",
-          "name": "name",
+          "author": "author",
+          "description": "description",
+          "publishedAt": "date",
+          "source": Object {
+            "id": "ddgdgd",
+            "name": "name",
+          },
+          "title": "Title",
+          "url": "sourceLink",
+          "urlToImage": "image url",
         }
       }
-      title="Title"
-      url="sourceLink"
-      urlToImage="image url"
     />
   </li>
 </ul>

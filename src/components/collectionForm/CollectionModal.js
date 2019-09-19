@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import SelectCollection from './SelectCollection';
+import PropTypes from 'prop-types';
+import AddCollection from './AddCollection';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -20,7 +23,7 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
   paper: {
     position: 'absolute',
-    width: 400,
+    width: '50vw',
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
@@ -28,18 +31,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SimpleModal() {
+export default function CollectionModal({ 
+  article, 
+  collections, 
+  fetchUserCollections, 
+  createCollection, 
+  handleSubmit,
+}) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
+  const [shown, setShown] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
+    fetchUserCollections();
   };
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const showAddCollection = () => {
+    !shown ? setShown(true) : setShown(false);
   };
 
   return (
@@ -54,9 +69,25 @@ export default function SimpleModal() {
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-          <p>This is where our form component will live</p>
+          <button onClick={handleClose}>X</button>
+          <SelectCollection 
+            article={article} 
+            collections={collections} 
+            handleSubmit={handleSubmit} 
+            showAddCollection={showAddCollection}
+            shown={shown}
+          />
+          {shown ? <AddCollection createCollection={createCollection}/> : <></>}
         </div>
       </Modal>
     </div>
   );
 }
+
+CollectionModal.propTypes = {
+  article: PropTypes.object.isRequired,
+  collections: PropTypes.array.isRequired,
+  fetchUserCollections: PropTypes.func.isRequired,
+  createCollection: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+};
