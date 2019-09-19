@@ -2,8 +2,6 @@ $bg-color: #E6E5E1;
 $shdow-gray: #d3d3d5;
 $orange: #DA4D1D;
 $blue: #2b26c3;
-$img-url: "https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80";
-$img-url2: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80";
 
 * {
   margin: 0;
@@ -138,7 +136,6 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 180px;
       height: 64px;
       border-radius: 80px;
     }
@@ -150,28 +147,18 @@ body {
 
     .source a {
       text-decoration: none;
-      color: red;
+      color: white;
     }
 
-    .social i:nth-of-type(2) {
-      -webkit-transition-delay: 0.3s;
-      transition-delay: 0.3s;
-    }
-
-    .social i:nth-of-type(3) {
-      -webkit-transition-delay: 0.2s;
-      transition-delay: 0.2s;
-    }
-
-    .social i:nth-of-type(4) {
-      -webkit-transition-delay: 0.1s;
-      transition-delay: 0.1s;
+    .source a:hover {
+      color: #E6E5E1;
     }
 
     &:hover i {
       opacity: 1;
       -webkit-transform: scale(1);
       transform: scale(1);
+      background-color: rgba(0, 0, 0, 0.6)
     }
 
     .modalButton {
@@ -208,15 +195,6 @@ body {
     &:hover .image {
       filter: grayscale(0);
       
-    }
-  }
-  
-  .card2 {
-    .pic {
-      background-image: url($img-url2);
-    }
-    button {
-      background-color: $blue;
     }
   }
 }
