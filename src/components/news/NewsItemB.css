@@ -186,6 +186,33 @@ body {
       }
     }
 
+    .deleteButton {
+      filter: grayscale(0);
+      display: flex;
+      align-items: center;
+      mix-blend-mode: hard-light;
+    }
+
+    .deleteButton button {
+      position: absolute;
+      right: 10px;
+      bottom: -15px;
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      outline:none;
+      transition: all 0.3s ease;
+
+      i {
+        font-size: 3rem;
+      }
+    }
+
+    
+
     &:hover button {
       transform: scale(5.5);
 

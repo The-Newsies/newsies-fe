@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../news/NewsItem.css';
+import styles from '../news/NewsItemB.css';
 
 export default function NewsItemCollected({ article, deleteArticle }) {
   const {
@@ -17,23 +17,26 @@ export default function NewsItemCollected({ article, deleteArticle }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.linkContainer}>
-        <a href={url} rel="noopener noreferrer" target="_blank">
-          View at {source.name}
-        </a>
-        <button onClick={() => deleteArticle(articleId)}>
-          Delete from Collection
-        </button>
-      </div>
-      <div className={styles.imageContainer}>
-        <img src={urlToImage} />
-      </div>
-      <div className={styles.titleContainer}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
-        <footer className={styles.source}>
-          <p>Published: {publishedAt}</p>
-        </footer>
+      <div className={styles.card}>
+        <div className={styles.image}>
+          <img src={urlToImage} />
+        </div>
+        <div className={styles.deleteButton}>
+          <button onClick={() => deleteArticle(articleId)}>
+          DELETE
+          </button>
+        </div>
+        <div className={styles.source}>
+          <i><a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a></i>
+        </div>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{title}</h3>
+          <p className={styles.description}>{description}</p>
+          <footer>
+            <p>Published: {publishedAt.split('T')[0]}</p>
+            
+          </footer>
+        </div>
       </div>
     </div>
   );
