@@ -14,7 +14,7 @@ exports[`Tag component renders Tag 1`] = `
         "lineHeigth": "18px",
         "padding": "0 5px",
         "textTransform": "uppercase",
-        "width": "175px",
+        "width": "140px",
       }
     }
   >

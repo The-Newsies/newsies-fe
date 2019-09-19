@@ -42,8 +42,8 @@ export default function NewsItem({ article }) {
           <p className={styles.description}>{description}</p>
           <footer>
             <p>Published: {publishedAt.split('T')[0]}</p>
-            <p>Sentiment Score: {score}</p>
-            <p>How Emotional?: {sentimentAbsolute}</p>
+            <div>Sentiment Score: {score}</div>
+            <div>How Emotional?: {sentimentAbsolute}</div>
           </footer>
         </div>
       </div>
