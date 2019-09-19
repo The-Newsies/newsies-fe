@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './NewsItem.css';
-import { useAuth0 } from '../../Auth0Provider';
-import CollectionModalContainer from '../../containers/CollectionModalContainer';
+import styles from '../news/NewsItem.css';
 
-export default function NewsItem({ article }) {
-  const { isAuthenticated } = useAuth0();
-
+export default function NewsItemCollected({ article }) {
   const { 
     title, 
     description, 
@@ -19,7 +15,6 @@ export default function NewsItem({ article }) {
     <div className={styles.container}>
       <div className={styles.linkContainer}>
         <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
-        {isAuthenticated ?  <CollectionModalContainer article={article} /> : <></>}
       </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />
@@ -35,7 +30,7 @@ export default function NewsItem({ article }) {
   );
 }
 
-NewsItem.propTypes = {
+NewsItemCollected.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
