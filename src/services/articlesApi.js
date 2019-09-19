@@ -31,5 +31,5 @@ export const postArticle = (article) => {
 };
 
 export const getArticleById = (articleId) => {
-  return request(`${process.env.API_URL}/articless/${articleId}`);
+  return request(`${process.env.API_URL}/articles/${articleId}`);
 };
