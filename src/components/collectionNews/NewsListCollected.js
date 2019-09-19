@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styles from '../news/NewsList.css';
 import NewsItemCollected from './NewsItemCollected';
 
-export default function NewsListCollected({ news }) {
+export default function NewsListCollected({ news, deleteArticle }) {
   const newsList = news.map(article => (
     <li key={article.source.id}>
-      <NewsItemCollected article={article}/>
+      <NewsItemCollected deleteArticle={deleteArticle} article={article}/>
     </li>
   ));
 
@@ -18,5 +18,6 @@ export default function NewsListCollected({ news }) {
 }
 
 NewsListCollected.propTypes = {
-  news: PropTypes.array.isRequired
+  news: PropTypes.array.isRequired,
+  deleteArticle: PropTypes.func.isRequired
 };

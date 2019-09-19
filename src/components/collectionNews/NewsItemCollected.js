@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../news/NewsItem.css';
 
-export default function NewsItemCollected({ article }) {
+export default function NewsItemCollected({ article, deleteArticle }) {
   const { 
     title, 
     description, 
@@ -15,6 +15,7 @@ export default function NewsItemCollected({ article }) {
     <div className={styles.container}>
       <div className={styles.linkContainer}>
         <a href={url} rel='noopener noreferrer' target='_blank'>View at {source.name}</a>
+        <button onClick={() => deleteArticle(source.id)}>Delete from Collection</button>
       </div>
       <div className={styles.imageContainer}>
         <img src={urlToImage} />
@@ -41,5 +42,6 @@ NewsItemCollected.propTypes = {
       id: PropTypes.string
     }),
     url: PropTypes.string.isRequired,
-  })
+  }),
+  deleteArticle: PropTypes.func.isRequired
 };
