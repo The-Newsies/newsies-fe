@@ -15,7 +15,7 @@ export default function SelectCollection({
 
   const collectionItems = collections.map(collection => {
     return (
-      <li key={collection._id} className={isSelected ? styles.li : ''}>
+      <li key={collection._id} className={isSelected === collection._id ? styles.li : ''}>
         <span onClick={() => setSelected(collection._id)}>{collection.name}</span>
       </li>);
   });
