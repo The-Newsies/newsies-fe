@@ -1,7 +1,13 @@
-import { getCollections } from '../services/collectionsApi';
+import { getCollections, deleteCollections } from '../services/collectionsApi';
 
 export const FETCH_COLLECTIONS = 'FETCH_COLLECTIONS';
 export const fetchCollections = () => ({
   type: FETCH_COLLECTIONS,
   payload: getCollections()
+});
+
+export const DELETE_COLLECTIONS = 'DELETE_COLLECTIONS';
+export const deleteCollection = () => ({
+  type: DELETE_COLLECTIONS,
+  payload: deleteCollections()
 });

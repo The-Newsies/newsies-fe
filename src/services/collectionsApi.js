@@ -25,3 +25,13 @@ export const patchArticleToCollection = (articleId, collectionId) => {
   );
 };
 
+export const deleteCollections = (collectionId) => {
+  return (
+    request(`${process.env.API_URL}/collections/${collectionId}`,
+      {
+        method: 'DELETE'
+      }
+    )
+  );
+};
+
