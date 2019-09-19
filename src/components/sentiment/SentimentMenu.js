@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Sentiment from 'sentiment';
 
 export default function SentimentMenu({ 
-  sortBy,
+  // sortBy,
   articles,
   updateSortBy, 
   updateArticles,
@@ -12,22 +12,19 @@ export default function SentimentMenu({
     const sentiment = new Sentiment();
     const result = sentiment.analyze(article.description || article.title || '');
     const score = result.score;
-    return { ...article, sentiment: score };
-  });
-
-  const scoredAbsolute = articles.map(article => {
-    const sentiment = new Sentiment();
-    const result = sentiment.analyze(article.description || article.title || '');
-    const score = result.positive.length + result.negative.length;
-    return { ...article, sentiment: score };
+    const sentimentAbsolute = result.calculation.reduce((acc, i) => {
+      acc = acc + Math.abs(Object.values(i)[0]);
+      return acc;
+    }, 0);
+    return { ...article, sentiment: score, sentimentAbsolute };
   });
 
   const handleChange = ({ target }) => {
     let updatedArticles;
     switch(target.value) {
       case 'date':
-        updatedArticles = scored.sort((first, second) => {
-          return new Date(first.publishedAt).getTime() - new Date(second.publishedAt).getTime();
+        updatedArticles = scored.sort(function(a, b) {
+          return (b.publishedAt < a.publishedAt) ? -1 : ((b.publishedAt > a.publishedAt) ? 1 : 0);
         });
         break;
       case 'positive':
@@ -41,13 +38,13 @@ export default function SentimentMenu({
         });
         break;
       case 'neutral':
-        updatedArticles = scoredAbsolute.sort(function(a, b) {
-          return a.sentiment - b.sentiment;
+        updatedArticles = scored.sort(function(a, b) {
+          return a.sentimentAbsolute - b.sentimentAbsolute;
         });
         break;
       case 'emotional':
-        updatedArticles = scoredAbsolute.sort(function(a, b) {
-          return b.sentiment - a.sentiment;
+        updatedArticles = scored.sort(function(a, b) {
+          return b.sentimentAbsolute - a.sentimentAbsolute;
         });
         break;
       default:
@@ -63,11 +60,11 @@ export default function SentimentMenu({
     <section>
       <p>Sort By:</p>
       <select onChange={handleChange}>
-        <option selected={sortBy === 'date' ? true : false} value="date">Date</option>
-        <option selected={sortBy === 'positive' ? true : false} value="positive">Positive</option>
-        <option selected={sortBy === 'negative' ? true : false} value="negative">Negative</option>
-        <option selected={sortBy === 'neutral' ? true : false} value="neutral">Neutral</option>
-        <option selected={sortBy === 'emotional' ? true : false} value="emotional">Emotional</option>
+        <option value="date">Date</option>
+        <option value="positive">Positive</option>
+        <option value="negative">Negative</option>
+        <option value="neutral">Neutral</option>
+        <option value="emotional">Emotional</option>
       </select>
     </section>
   );

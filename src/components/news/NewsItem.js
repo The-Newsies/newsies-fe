@@ -12,6 +12,11 @@ export default function NewsItem({ article }) {
   const sentiment = new Sentiment();
   const result = sentiment.analyze(article.description || article.title || '');
   const score = result.score;
+  const sentimentAbsolute = result.calculation.reduce((acc, i) => {
+    acc = acc + Math.abs(Object.values(i)[0]);
+    return acc;
+  }, 0);
+
   const { 
     title, 
     description, 
@@ -34,9 +39,10 @@ export default function NewsItem({ article }) {
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         <footer className={styles.source}>
-          <p>Published: {publishedAt}</p>
+          <p>Published: {publishedAt.split('T')[0]}</p>
           {/* <p>Author: {author}</p> */}
-          <p>Sentiment: {score}</p>
+          <p>Sentiment Score: + and - can cancel out each other {score}</p>
+          <p>How Emotional?: + and - accumulate instead of canceling out {sentimentAbsolute}</p>
         </footer>
       </div>
     </div>

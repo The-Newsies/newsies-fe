@@ -34,7 +34,6 @@ export const getSearchMultiple = (searchArray) => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author,
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
@@ -51,7 +50,6 @@ export const getSearchAll = (searchTerm) => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author,
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
@@ -68,7 +66,6 @@ export const getSearchByCategory = (searchTerm, category = '') => {
     .then(res => {
       return res.articles.map(article => ({
         ...article, 
-        publishedAt: article.publishedAt.split('T')[0],
         author: !article.author ? 'unknown' : article.author,
         urlToImage: !article.urlToImage ? placeholder : article.urlToImage
       }));
