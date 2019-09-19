@@ -25,7 +25,18 @@ export const patchArticleToCollection = (articleId, collectionId) => {
   );
 };
 
-export const getCollectionById = (_id) => {
-  return request(`${process.env.API_URL}/collections/${_id}`);
+export const getCollectionById = (collectionId) => {
+  return request(`${process.env.API_URL}/collections/${collectionId}`);
+};
+
+export const deleteArticleInCollection = (collectionId, articleId) => {
+  return ( 
+    request(`${process.env.API_URL}/collections/${collectionId}/delete-article`,
+      {
+        method: 'PATCH',
+        body: JSON.stringify({ articleId })
+      }
+    )
+  );
 };
 
