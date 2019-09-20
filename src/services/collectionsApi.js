@@ -36,7 +36,6 @@ export const deleteArticleInCollection = (collectionId, articleId) => {
 };
 
 export const deleteCollections = collectionId => {
-  console.log(collectionId);
   return request(`${process.env.API_URL}/collections/${collectionId}`, {
     method: 'DELETE'
   });

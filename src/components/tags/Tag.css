@@ -9,16 +9,3 @@
 .button:hover {
   cursor: pointer;
 }
-
-/* .buttonSelected {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background: grey;
-  color: black;
-  width: 175px;
-}
-
-.button p {
-  font-size: .8rem;
-} */
