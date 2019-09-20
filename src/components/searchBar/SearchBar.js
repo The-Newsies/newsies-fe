@@ -9,7 +9,7 @@ function SearchBar({ handleClick }) {
     <div className={styles.white}>
       <label>
         <input type="text" placeholder="search all news" value={search} onChange={({ target }) => setSearch(target.value)}></input>
-        <button className={styles.searchButton} onClick={() => handleClick(search)}>Go!</button>
+        <button className={styles.searchButton} onClick={() => handleClick(search)}>GO</button>
       </label>
     </div>
   );

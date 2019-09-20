@@ -15,7 +15,7 @@ exports[`SearchBar component renders SearchBar 1`] = `
       className="searchButton"
       onClick={[Function]}
     >
-      Go!
+      GO
     </button>
   </label>
 </div>
