@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CollectionItem from './CollectionItem';
+import styles from '../news/NewsList.css';
 
 export default function CollectionList({ collections, handleDelete, fetch }) {
   const collectionList = collections.map(({
@@ -20,7 +21,7 @@ export default function CollectionList({ collections, handleDelete, fetch }) {
   ));
 
   return (
-    <ul>
+    <ul className={styles.container}>
       {collectionList}
     </ul>
   );
