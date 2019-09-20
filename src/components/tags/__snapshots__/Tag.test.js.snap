@@ -11,9 +11,10 @@ exports[`Tag component renders Tag 1`] = `
         "background": "white",
         "border": "none",
         "display": "flex",
+        "fontSize": ".8rem",
         "justifyContent": "space-evenly",
         "lineHeigth": "18px",
-        "padding": "0 5px",
+        "padding": "8px 8px",
         "textTransform": "uppercase",
         "width": "140px",
       }

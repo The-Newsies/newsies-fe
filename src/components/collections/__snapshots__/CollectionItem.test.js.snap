@@ -2,33 +2,37 @@
 
 exports[`CollectionItem component renders CollectionItem 1`] = `
 <div
-  className="container"
+  className="bodyContainer"
 >
   <div
-    className="card"
+    className="container"
   >
     <div
-      className="text"
+      className="card"
     >
-      <Link
-        to="/collection/delete"
+      <div
+        className="text"
       >
-        <h3>
-          Title
-        </h3>
-        <p>
-          description
-        </p>
-      </Link>
-    </div>
-    <div
-      className="deleteButton"
-    >
-      <button
-        onClick={[Function]}
+        <Link
+          to="/collection/delete"
+        >
+          <h3>
+            Title
+          </h3>
+          <p>
+            description
+          </p>
+        </Link>
+      </div>
+      <div
+        className="deleteButton"
       >
-        ✗
-      </button>
+        <button
+          onClick={[Function]}
+        >
+          ✗
+        </button>
+      </div>
     </div>
   </div>
 </div>
