@@ -21,14 +21,8 @@ i {
   transition: all 0.2s ease;
 }
 
-h3{
+h2{
   pointer-events:none;
-}
-
-body {
-  background-color: $bg-color;
-  width: 100vw;
-  height: 100vh;
 }
 
 .container {
@@ -46,7 +40,6 @@ body {
     background-color: #fff;
     overflow: hidden;
     margin-top: 4px;
-    margin-bottom: 4px;
 
     .text {
       display: flex;
@@ -133,9 +126,12 @@ body {
       display: flex;
       align-items: center;
       mix-blend-mode: hard-light;
+      
     }
 
     .deleteButton button {
+      font-size: 1rem;
+      font-weight: bolder;
       position: absolute;
       right: 10px;
       bottom: 15px;
@@ -154,7 +150,7 @@ body {
     }
 
     &:hover button {
-      transform: scale(22);
+      transform: scale(5.5);
 
     }
 

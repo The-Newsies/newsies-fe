@@ -23,7 +23,7 @@ export default function NewsItemCollected({ article, deleteArticle }) {
         </div>
         <div className={styles.deleteButton}>
           <button onClick={() => deleteArticle(articleId)}>
-          DELETE
+          ✗
           </button>
         </div>
         <div className={styles.source}>
