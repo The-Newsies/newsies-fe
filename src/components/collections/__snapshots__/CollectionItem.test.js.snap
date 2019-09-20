@@ -1,19 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CollectionItem component renders CollectionItem 1`] = `
-<Link
-  to="/collection/delete"
+<div
+  className="container"
 >
-  <h3>
-    Title
-  </h3>
-  <p>
-    description
-  </p>
-  <button
-    onClick={[Function]}
+  <div
+    className="card"
   >
-    ✗
-  </button>
-</Link>
+    <div
+      className="text"
+    >
+      <Link
+        to="/collection/delete"
+      >
+        <h3>
+          Title
+        </h3>
+        <p>
+          description
+        </p>
+      </Link>
+    </div>
+    <div
+      className="deleteButton"
+    >
+      <button
+        onClick={[Function]}
+      >
+        ✗
+      </button>
+    </div>
+  </div>
+</div>
 `;
