@@ -3,6 +3,7 @@
 exports[`Tag component renders Tag 1`] = `
 <div>
   <button
+    className="button"
     onClick={[Function]}
     style={
       Object {

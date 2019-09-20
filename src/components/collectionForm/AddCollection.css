@@ -1,0 +1,17 @@
+.button {
+  color: black;
+  font-size: .8rem;
+  width: 6rem;
+  margin-top: .5rem;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.button:hover {
+  color: white;
+  background: black;
+  font-size: .8rem;
+  width: 6rem;
+  margin-top: .5rem;
+  font-family: 'Montserrat', sans-serif;
+}

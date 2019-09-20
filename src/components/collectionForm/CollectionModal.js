@@ -4,6 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import SelectCollection from './SelectCollection';
 import PropTypes from 'prop-types';
 import AddCollection from './AddCollection';
+import styles from './CollectionModal.css';
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -16,7 +17,7 @@ function getModalStyle() {
   return {
     top: `${top}%`,
     left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
+    transform: `translate(-${top}%, -${left}%)`
   };
 }
 
@@ -27,19 +28,18 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-  },
+    padding: '.5rem'
+  }
 }));
 
-export default function CollectionModal({ 
-  article, 
-  collections, 
-  fetchUserCollections, 
-  createCollection, 
-  handleSubmit,
+export default function CollectionModal({
+  article,
+  collections,
+  fetchUserCollections,
+  createCollection,
+  handleSubmit
 }) {
   const classes = useStyles();
-  // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = useState(getModalStyle);
   const [open, setOpen] = useState(false);
   const [shown, setShown] = useState(false);
@@ -59,9 +59,7 @@ export default function CollectionModal({
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
-      
-      </button>
+      <button type="button" onClick={handleOpen}></button>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
@@ -69,16 +67,26 @@ export default function CollectionModal({
         onClose={handleClose}
       >
         <div style={modalStyle} className={classes.paper}>
-          <button onClick={handleClose}>X</button>
-          <SelectCollection 
-            article={article} 
-            collections={collections} 
-            handleSubmit={handleSubmit} 
+          <div className={styles.buttonDisplay}>
+            <button className={styles.button} onClick={handleClose}>
+              X
+            </button>
+          </div>
+          <SelectCollection
+            article={article}
+            collections={collections}
+            handleSubmit={handleSubmit}
             showAddCollection={showAddCollection}
             shown={shown}
             handleClose={handleClose}
           />
-          {shown ? <AddCollection createCollection={createCollection}/> : <></>}
+          <div className={styles.container}>
+            {shown ? (
+              <AddCollection createCollection={createCollection} />
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
       </Modal>
     </div>
@@ -90,5 +98,5 @@ CollectionModal.propTypes = {
   collections: PropTypes.array.isRequired,
   fetchUserCollections: PropTypes.func.isRequired,
   createCollection: PropTypes.func.isRequired,
-  handleSubmit: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
