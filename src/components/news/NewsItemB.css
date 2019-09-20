@@ -218,6 +218,7 @@ body {
 
     &:hover button {
       transform: scale(5.5);
+      mix-blend-mode: hard-light;
 
     }
 

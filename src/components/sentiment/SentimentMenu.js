@@ -11,46 +11,25 @@ export default function SentimentMenu({
     const sentiment = new Sentiment();
     const result = sentiment.analyze(article.description || article.title || '');
     const score = result.score;
-    const sentimentAbsolute = result.calculation.reduce((acc, i) => {
-      acc = acc + Math.abs(Object.values(i)[0]);
+    const sentimentAbsolute = result.calculation.reduce((acc, curr) => {
+      acc = acc + Math.abs(Object.values(curr)[0]);
       return acc;
     }, 0);
     return { ...article, sentiment: score, sentimentAbsolute };
   });
 
-  const handleChange = ({ target }) => {
-    let updatedArticles;
-    switch(target.value) {
-      case 'date':
-        updatedArticles = scored.sort(function(a, b) {
-          return (b.publishedAt < a.publishedAt) ? -1 : ((b.publishedAt > a.publishedAt) ? 1 : 0);
-        });
-        break;
-      case 'positive':
-        updatedArticles = scored.sort(function(a, b) {
-          return b.sentiment - a.sentiment;
-        });
-        break;
-      case 'negative':
-        updatedArticles = scored.sort(function(a, b) {
-          return a.sentiment - b.sentiment;
-        });
-        break;
-      case 'neutral':
-        updatedArticles = scored.sort(function(a, b) {
-          return a.sentimentAbsolute - b.sentimentAbsolute;
-        });
-        break;
-      case 'emotional':
-        updatedArticles = scored.sort(function(a, b) {
-          return b.sentimentAbsolute - a.sentimentAbsolute;
-        });
-        break;
-      default:
-        updatedArticles = scored;
-        break;
-    }
+  const sortFunctionMap = {
+    date: (a, b) => (b.publishedAt < a.publishedAt) ? -1 : ((b.publishedAt > a.publishedAt) ? 1 : 0),
+    positive: (a, b) => b.sentiment - a.sentiment,
+    negative: (a, b) => a.sentiment - b.sentiment,
+    neutral: (a, b) => a.sentimentAbsolute - b.sentimentAbsolute,
+    emotional: (a, b) => b.sentimentAbsolute - a.sentimentAbsolute
+  };
 
+  const handleChange = ({ target }) => {
+    const sortFunction = sortFunctionMap[target.value];
+    const updatedArticles = sortFunction ? scored.sort(sortFunction) : scored;
+    
     updateArticles(updatedArticles);
   };
 
