@@ -4,6 +4,7 @@ import SearchBarContainer from '../containers/SearchBarContainer';
 import SearchContainer from '../containers/SearchContainer';
 import PropTypes from 'prop-types';
 import PageTitle from '../components/pageTitle/PageTitle';
+import Footer from '../components/footer/Footer';
 
 export default function Search({ location }) {
   return (
@@ -12,6 +13,7 @@ export default function Search({ location }) {
     <PageTitle title='Search All News' />
     <SearchBarContainer />
     <SearchContainer />
+    <Footer />
     </>
   );
 }
