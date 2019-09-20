@@ -52,7 +52,7 @@ export default function SelectCollection({
             ) : (
               <button className={styles.saveButton}>Save</button>
             )}
-            {showSuccess ? <p className={styles.modalText}>Successfully saved!</p> : <></>}
+            { showSuccess && <p className={styles.modalText}>Successfully saved!</p> }
           </div>
         </div>
       </form>
