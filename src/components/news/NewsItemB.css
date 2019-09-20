@@ -169,9 +169,12 @@ body {
     }
 
     .modalButton button {
+      font-size: 1rem;
+      font-weight: bolder;
+      color: #fff;
       position: absolute;
       right: 10px;
-      bottom: -15px;
+      bottom: -12px;
       width: 30px;
       height: 30px;
       background-color: rgb(43, 38, 195);
@@ -194,6 +197,8 @@ body {
     }
 
     .deleteButton button {
+      font-size: 1rem;
+      font-weight: bolder;
       position: absolute;
       right: 10px;
       bottom: -15px;

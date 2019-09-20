@@ -59,7 +59,7 @@ export default function CollectionModal({
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}></button>
+      <button type="button" onClick={handleOpen}>+</button>
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
@@ -69,7 +69,7 @@ export default function CollectionModal({
         <div style={modalStyle} className={classes.paper}>
           <div className={styles.buttonDisplay}>
             <button className={styles.button} onClick={handleClose}>
-              X
+            ✗
             </button>
           </div>
           <SelectCollection
