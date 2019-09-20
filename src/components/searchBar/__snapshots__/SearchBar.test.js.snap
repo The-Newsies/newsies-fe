@@ -1,18 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchBar component renders SearchBar 1`] = `
-<div>
-  <input
-    onChange={[Function]}
-    placeholder="search all news"
-    type="text"
-    value=""
-  />
-  <button
-    className="searchButton"
-    onClick={[Function]}
-  >
-    Search
-  </button>
+<div
+  className="white"
+>
+  <label>
+    <input
+      onChange={[Function]}
+      placeholder="search all news"
+      type="text"
+      value=""
+    />
+    <button
+      className="searchButton"
+      onClick={[Function]}
+    >
+      Go!
+    </button>
+  </label>
 </div>
 `;

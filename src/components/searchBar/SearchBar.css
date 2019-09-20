@@ -11,11 +11,21 @@ input[type=text] {
 }
 
 .searchButton {
-  height: 1.4rem;
+  display: inline;
   border: rgb(160, 160, 160) 1px solid;
+  width: 30px;
+  margin-top: .5rem;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: .2rem;
+  margin-right: .3rem;
 }
 
 .searchButton:hover {
   background: gray;
   color: white;
+}
+
+.white {
+  background-color: #FFF;
 }
