@@ -14,9 +14,9 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
     border: 'none',
     textTransform: 'uppercase',
     transition: 'color .25s, background .25s, border .25s',
-    padding: '10px 10px',
+    padding: '8px 8px',
     lineHeigth: '18px',
-    fontSize: '.9rem'
+    fontSize: '.8rem'
   };
 
   const menuItem = {
@@ -27,9 +27,9 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
     background: 'white',
     border: 'none',
     textTransform: 'uppercase',
-    padding: '10px 10px',
+    padding: '8px 8px',
     lineHeigth: '18px',
-    fontSize: '.9rem'
+    fontSize: '.8rem'
   };
 
   function wrapper() {
