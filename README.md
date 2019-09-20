@@ -1,4 +1,5 @@
 ![Travis](https://api.travis-ci.com/The-Newsies/newsies-fe.svg?branch=master)
+[![Build Status](https://travis-ci.com/The-Newsies/newsies-fe.svg?branch=master)](https://travis-ci.com/The-Newsies/newsies-fe)
 
 # Newzie
 
