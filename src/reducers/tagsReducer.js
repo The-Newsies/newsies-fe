@@ -8,7 +8,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case FETCH_TAGS:
-      return { ...state, tags:action.payload };
+      return { ...state, tags: action.payload };
     case SET_TAG:
       return { ...state, selectedTag: action.payload };
     default:

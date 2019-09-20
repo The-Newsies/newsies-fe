@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import Tag from './Tag';
 import style from './TagsList.css';
 
-//isSelected = {name === selected}
-
 export default function TagsList({ fetchByCategory, tags, setSelectedTag, selected }) {
   const tagArray = tags.map(({ name, color, _id }) => (
     <li key={_id}>
-      <Tag isSelected={name === selected} setSelectedTag={setSelectedTag} name={name} color={color} fetchByCategory={fetchByCategory}/>
+      <Tag 
+        isSelected={name === selected} 
+        setSelectedTag={setSelectedTag} 
+        name={name} 
+        color={color} 
+        fetchByCategory={fetchByCategory}
+      />
     </li>
   ));
 

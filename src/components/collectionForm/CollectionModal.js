@@ -81,11 +81,7 @@ export default function CollectionModal({
             handleClose={handleClose}
           />
           <div className={styles.container}>
-            {shown ? (
-              <AddCollection createCollection={createCollection} />
-            ) : (
-              <></>
-            )}
+            { shown && <AddCollection createCollection={createCollection} /> }
           </div>
         </div>
       </Modal>
