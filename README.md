@@ -1,3 +1,5 @@
+![Travis](https://api.travis-ci.com/The-Newsies/newsies-fe.svg?branch=master)
+
 # Newzie
 
 This is the front-end repo for Newzie, an app that allows you to consume and organize news from a variety of sources. 
