@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/The-Newsies/newsies-fe.svg?branch=master)](https://travis-ci.com/The-Newsies/newsies-fe)
 
-# :newspaper:Newzie:newspaper:
+# :newspaper: Newzie :newspaper:
 
 This is the front-end repo for Newzie, an app that allows you to consume and organize news from a variety of sources. 
 
