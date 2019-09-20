@@ -1,6 +1,5 @@
 input[type=text] {
   margin-top: .5rem;
-  border: 2px solid red;
   border-radius: 10px;
   padding: .2rem;
   margin-right: .3rem;
@@ -13,9 +12,9 @@ input[type=text] {
 .searchButton {
   display: inline;
   border: rgb(160, 160, 160) 1px solid;
+  background: red;
   width: 30px;
   margin-top: .5rem;
-  border: 2px solid red;
   border-radius: 10px;
   padding: .2rem;
   margin-right: .3rem;

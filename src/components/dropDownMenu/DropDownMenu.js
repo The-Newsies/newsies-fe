@@ -42,7 +42,7 @@ export default function DropDownMenu() {
           fontWeight: 'bold', 
           color: 'red' }}>Search</NavLink></MenuItem>
        
-        <MenuItem onClick={handleClose}><span onClick={logout}>Sign-out</span></MenuItem>
+        <MenuItem onClick={handleClose}><span onClick={logout}>Sign out</span></MenuItem>
       </Menu>
     </div>
   );
