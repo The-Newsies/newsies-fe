@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CollectionItem component renders CollectionItem 1`] = `
-
 <div
   className="container"
 >
@@ -33,4 +32,4 @@ exports[`CollectionItem component renders CollectionItem 1`] = `
     </div>
   </div>
 </div>
-);
+`;
