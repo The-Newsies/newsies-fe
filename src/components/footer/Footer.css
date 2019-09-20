@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .body a {
@@ -13,12 +14,18 @@
   }
 
 .body a:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
+  color: #FF5733;
 }
 
 .body {
   background-color: black;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: .2rem, .2rem;
 }
 
