@@ -6,11 +6,19 @@ import PropTypes from 'prop-types';
 import PageTitle from '../components/pageTitle/PageTitle';
 
 export default function Search({ location }) {
+  const style = {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: '#FFFFFF'
+  };
+
   return (
     <>
     <Header location={location}/>
     <PageTitle title='Search All News' />
-    <SearchBarContainer />
+    <div style={style}>
+      <SearchBarContainer  />
+    </div>
     <SearchContainer />
     </>
   );

@@ -6,9 +6,11 @@ function SearchBar({ handleClick }) {
   const [search, setSearch] = useState('');
 
   return (
-    <div>
-      <input type="text" placeholder="search all news" value={search} onChange={({ target }) => setSearch(target.value)}></input>
-      <button className={styles.searchButton} onClick={() => handleClick(search)}>Search</button>
+    <div className={styles.white}>
+      <label>
+        <input type="text" placeholder="search all news" value={search} onChange={({ target }) => setSearch(target.value)}></input>
+        <button className={styles.searchButton} onClick={() => handleClick(search)}>Go!</button>
+      </label>
     </div>
   );
 }
