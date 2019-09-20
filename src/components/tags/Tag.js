@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Tag.css';
+import styles from './Tag.css';
 
 export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSelected }) {
   const tagColorStyles = {
@@ -37,7 +37,7 @@ export default function Tag({ name, color, fetchByCategory, setSelectedTag, isSe
 
   return (
     <div>
-      <button style={isSelected ? tagColorStyles : menuItem} onClick={wrapper}>
+      <button className={styles.button} style={isSelected ? tagColorStyles : menuItem} onClick={wrapper}>
         <p>{name}</p>
       </button>
     </div>

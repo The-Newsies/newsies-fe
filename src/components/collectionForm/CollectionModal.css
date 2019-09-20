@@ -1,0 +1,21 @@
+.button {
+  font-family: 'Montserrat', sans-serif;
+  border: 0;
+  padding: 0;
+  margin-bottom: .6rem;
+  font-size: 1.5rem;
+}
+
+.buttonDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+

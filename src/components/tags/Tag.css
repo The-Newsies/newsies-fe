@@ -1,4 +1,4 @@
-button {
+.button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -6,11 +6,11 @@ button {
   background: white;
 }
 
-button:hover {
+.button:hover {
   cursor: pointer;
 }
 
-.buttonSelected {
+/* .buttonSelected {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -21,4 +21,4 @@ button:hover {
 
 .button p {
   font-size: .8rem;
-}
+} */
