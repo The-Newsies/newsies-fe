@@ -209,9 +209,7 @@ body {
       i {
         font-size: 3rem;
       }
-    }
-
-    
+    }  
 
     &:hover button {
       transform: scale(5.5);
