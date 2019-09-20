@@ -6,7 +6,13 @@ import style from './TagsList.css';
 export default function TagsList({ fetchByCategory, tags, setSelectedTag, selected }) {
   const tagArray = tags.map(({ name, color, _id }) => (
     <li key={_id}>
-      <Tag isSelected={name === selected} setSelectedTag={setSelectedTag} name={name} color={color} fetchByCategory={fetchByCategory}/>
+      <Tag 
+        isSelected={name === selected} 
+        setSelectedTag={setSelectedTag} 
+        name={name} 
+        color={color} 
+        fetchByCategory={fetchByCategory}
+      />
     </li>
   ));
 

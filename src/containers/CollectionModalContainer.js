@@ -20,7 +20,13 @@ class CollectionModalContainer extends Component {
   }
 
   render() {
-    const { article, collections, fetchUserCollections, createCollection, handleSubmit } = this.props;
+    const { 
+      article, 
+      collections, 
+      fetchUserCollections, 
+      createCollection, 
+      handleSubmit 
+    } = this.props;
 
     return <CollectionModal 
       fetchUserCollections={fetchUserCollections} 
