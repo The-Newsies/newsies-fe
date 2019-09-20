@@ -19,10 +19,18 @@ class TagsContainer extends Component {
   }
 
   render() {
-    const { tags, fetchByCategory, setSelectedTag, selected } = this.props;
+    const { 
+      tags, 
+      fetchByCategory, 
+      setSelectedTag, 
+      selected } = this.props;
 
     return (
-      <TagsList tags={tags} fetchByCategory={fetchByCategory} setSelectedTag={setSelectedTag} selected={selected} />
+      <TagsList 
+        tags={tags} 
+        fetchByCategory={fetchByCategory} 
+        setSelectedTag={setSelectedTag} 
+        selected={selected} />
     );
   }
 }
