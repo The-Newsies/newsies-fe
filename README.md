@@ -26,4 +26,4 @@ API
 * [NewsAPI](https://newsapi.org/)
 
 Back-end
-* [Repo](https://github.com/The-Newsies/newsies-be)
+* See our [Repo](https://github.com/The-Newsies/newsies-be)
