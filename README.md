@@ -20,6 +20,7 @@ Front-end
 * React
 * Redux
 * Material-UI
+* Jest
 * Hosted on Netlify
 
 API
