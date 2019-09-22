@@ -21,12 +21,12 @@ Front-end
 * Redux
 * Material-UI
 * Jest
+* Auth0
 * Hosted on Netlify
 
 Key Resources
 * [NewsAPI](https://newsapi.org/)
 * [sentiment](https://www.npmjs.com/package/sentiment)
-* [Auth0](https://auth0.com/)
 
 Back-end
 * See our [Repo](https://github.com/The-Newsies/newsies-be)
