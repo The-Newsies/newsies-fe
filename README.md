@@ -23,8 +23,9 @@ Front-end
 * Jest
 * Hosted on Netlify
 
-API
+Resources
 * [NewsAPI](https://newsapi.org/)
+* [sentiment](https://www.npmjs.com/package/sentiment)
 
 Back-end
 * See our [Repo](https://github.com/The-Newsies/newsies-be)
