@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/The-Newsies/newsies-fe.svg?branch=master)](https://travis-ci.com/The-Newsies/newsies-fe)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/61dc23e9-3558-43f5-bd61-684114a671bc/deploy-status)](https://app.netlify.com/sites/newzie/deploys)
 
 # :newspaper: Newzie :newspaper:
 
