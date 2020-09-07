@@ -5,7 +5,7 @@
 
 This is the front-end repo for Newzie, an app that allows you to consume and organize news from a variety of sources. 
 
-Try our app: [Newzie](https://newzie.netlify.com)
+Demo: [Newzie](https://www.youtube.com/watch?v=GF9-4miKsto&feature=youtu.be)
 
 ## Features
 
